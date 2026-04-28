@@ -41,7 +41,7 @@ const tip = ref(
     ? ''
     : lang.value === 'en'
     ? 'This is a demo environment. For production, please visit: '
-    : '当前为演示环境，StarOps 生产地址为：'
+    : '当前为演示环境，STAROps 生产地址为：'
 )
 
 const productionUrl = 'https://starops.console.aliyun.com'
