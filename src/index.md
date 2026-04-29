@@ -33,7 +33,7 @@ pageClass: sls-observe-home
   </a>
   <a class="sls-home-playground" href="/doc/playground/demo.html" target="_blank">
     <span class="sls-home-playground__kicker">SLS</span>
-    <strong>SLS Playground</strong>
+    <strong>SLS<br />Playground</strong>
     <span class="sls-home-playground__summary">完整只读控制台 Demo，包含 CloudLens、日志分析、可视化与智能运维应用。</span>
     <span class="sls-home-playground__action">启动演示</span>
   </a>

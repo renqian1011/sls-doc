@@ -2,11 +2,14 @@
   /* --vt-c-brand: var(--vp-c-green);
   --vt-c-brand-light: var(--vp-c-green-light);
   --vt-c-brand-dark: var(--vp-c-green-dark); */
-  --vp-c-green: #42b883;
-  --vp-c-green-light: #42d392;
-  --vp-c-green-dark: #33a06f;
-  --vp-c-green-dimm-1: rgba(66, 184, 131, 0.5);
-  --vp-c-brand-soft: rgba(66, 184, 131, 0.05);
+  --vp-c-green: #4464f0;
+  --vp-c-green-light: #6382fd;
+  --vp-c-green-dark: #2442c7;
+  --vp-c-green-dimm-1: rgba(68, 100, 240, 0.5);
+  --vp-c-brand-soft: rgba(68, 100, 240, 0.08);
+  --vt-c-green: #4464f0;
+  --vt-c-green-light: #6382fd;
+  --vt-c-green-dark: #2442c7;
 
   --vp-custom-block-tip-border: var(--vp-c-green-dimm-1);
   --vp-c-brand-1: var(--vp-c-green);
