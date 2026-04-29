@@ -1,31 +1,49 @@
-# 阿里云可观测
+---
+pageClass: sls-observe-home
+---
 
-阿里云可观测团队，负责阿里集团百 PB 级别可观测产品（SLS、ARMS、云监控）。 我们立志于打造面向未来的实时、智能、大规模观测分析平台，以此构建智能运维（AIOps）、大数据安全、业务监控和分析等服务，加速数字化创新。
+<section class="sls-home-hero">
+  <div class="sls-home-hero__stars" aria-hidden="true"></div>
+  <div class="sls-home-hero__mesh" aria-hidden="true"></div>
+  <div class="sls-home-hero__content">
+    <p class="sls-home-eyebrow">Observability Demo Center</p>
+    <h1>阿里云可观测</h1>
+    <p class="sls-home-lede">阿里云可观测团队，负责阿里集团百 PB 级别可观测产品（SLS、ARMS、云监控）。我们立志于打造面向未来的实时、智能、大规模观测分析平台，以此构建智能运维（AIOps）、大数据安全、业务监控和分析等服务，加速数字化创新。</p>
+    <div class="sls-home-signals" aria-label="可观测数据类型">
+      <span>Logs</span>
+      <span>Metrics</span>
+      <span>Traces</span>
+      <span>Alerts</span>
+    </div>
+  </div>
+</section>
 
-:::tip Starops（全域智能运维平台）Playground
-Starops Playground 包含了多个场景的智能运维 Demo，欢迎体验！
-
-[尝试](/doc/playground/staropsdemo.html){target="_blank"}
-:::
-
-:::tip 云监控 2.0 Playground
-阿里云云监控2.0是融合日志服务SLS、云监控CMS、应用实时监控服务ARMS等产品后全新升级的一站式可观测平台，提供基于指标、链路、日志、事件的统一观测图谱，结合可视化和告警能力，实现从基础设施到应用层的全链路、端到端的统一观测，帮助快速发现并解决潜在问题，提高运维效率。
-
-
-[尝试](/doc/playground/cmsdemo.html){target="_blank"}
-:::
-
-:::tip SLS Playground
-SLS Playground 包含了 SLS 大部分功能的演示 demo，是一个完整的 SLS 控制台只读账号，包含智能运维类 APP Demo、CloudLens APP Demo、多种日志分析 Demo，可视化 Demo 等等，尽情畅玩吧！
-
-[尝试](/doc/playground/demo.html){target="_blank"}
-:::
-
-:::tip ARMS Playground
-ARMS Playground 包含了应用监控 Demo、调用链分析 Demo、性能监控 Demo、用户体验监控 Demo 等等，欢迎体验！
-
-[尝试](/doc/playground/armsdemo.html){target="_blank"}
-:::
+<section class="sls-home-launchpad" aria-label="Playground">
+  <a class="sls-home-playground" href="/doc/playground/staropsdemo.html" target="_blank">
+    <span class="sls-home-playground__kicker">STAROps</span>
+    <strong>STAROps Playground</strong>
+    <span class="sls-home-playground__summary">多个场景的全域智能运维 Demo，适合快速体验诊断与根因分析工作流。</span>
+    <span class="sls-home-playground__action">启动演示</span>
+  </a>
+  <a class="sls-home-playground" href="/doc/playground/cmsdemo.html" target="_blank">
+    <span class="sls-home-playground__kicker">CMS 2.0</span>
+    <strong>云监控 2.0 Playground</strong>
+    <span class="sls-home-playground__summary">融合 SLS、CMS、ARMS 的一站式可观测平台，覆盖指标、链路、日志与事件。</span>
+    <span class="sls-home-playground__action">启动演示</span>
+  </a>
+  <a class="sls-home-playground" href="/doc/playground/demo.html" target="_blank">
+    <span class="sls-home-playground__kicker">SLS</span>
+    <strong>SLS Playground</strong>
+    <span class="sls-home-playground__summary">完整只读控制台 Demo，包含 CloudLens、日志分析、可视化与智能运维应用。</span>
+    <span class="sls-home-playground__action">启动演示</span>
+  </a>
+  <a class="sls-home-playground" href="/doc/playground/armsdemo.html" target="_blank">
+    <span class="sls-home-playground__kicker">ARMS</span>
+    <strong>ARMS Playground</strong>
+    <span class="sls-home-playground__summary">应用监控、调用链分析、性能监控、用户体验监控等场景入口。</span>
+    <span class="sls-home-playground__action">启动演示</span>
+  </a>
+</section>
 
 ## 案例中心介绍
 
