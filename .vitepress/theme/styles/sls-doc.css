@@ -1036,9 +1036,10 @@
   width: fit-content;
   min-height: 24px;
   padding: 4px 9px;
+  border: 1px solid rgba(68, 100, 240, 0.12);
   border-radius: 999px;
-  color: #536171;
-  background: rgba(24, 35, 51, 0.07);
+  color: var(--sls-home-brand);
+  background: rgba(68, 100, 240, 0.1);
   font-size: 12px;
   line-height: 1.25;
   font-weight: 700;
@@ -1212,6 +1213,8 @@
 }
 
 .sls-observe-home .vp-doc table thead {
+  display: block;
+  min-width: 100%;
   position: sticky;
   top: 0;
   z-index: 3;
@@ -1219,8 +1222,24 @@
   box-shadow: inset 0 -1px 0 rgba(38, 52, 78, 0.1);
 }
 
+.sls-observe-home .vp-doc table tbody {
+  display: block;
+  min-width: 100%;
+}
+
+.sls-observe-home .vp-doc table tr {
+  display: grid;
+  grid-template-columns: minmax(172px, 0.78fr) minmax(220px, 0.95fr) minmax(420px, 2.35fr);
+  min-width: 100%;
+}
+
+.sls-observe-home .vp-doc table tr:has(> :nth-child(2):last-child) {
+  grid-template-columns: minmax(172px, 0.7fr) minmax(440px, 2.6fr);
+}
+
 .sls-observe-home .vp-doc table th {
-  min-width: 180px;
+  min-width: 0;
+  width: 100%;
   padding: 13px 16px;
   border: 0;
   border-bottom: 1px solid rgba(38, 52, 78, 0.1);
@@ -1235,13 +1254,13 @@
   position: sticky;
   left: 0;
   z-index: 4;
-  min-width: 172px;
   background: var(--sls-home-panel-soft);
   box-shadow: 1px 0 0 rgba(38, 52, 78, 0.08);
 }
 
 .sls-observe-home .vp-doc table td {
-  min-width: 220px;
+  min-width: 0;
+  width: 100%;
   padding: 14px 16px;
   border: 0;
   border-bottom: 1px solid rgba(15, 35, 55, 0.08);
@@ -1267,8 +1286,6 @@
   position: sticky;
   left: 0;
   z-index: 2;
-  min-width: 172px;
-  max-width: 220px;
   color: var(--sls-home-text);
   background: var(--sls-home-panel);
   box-shadow: 1px 0 0 rgba(15, 35, 55, 0.08);
@@ -1368,8 +1385,9 @@
 }
 
 .dark .sls-observe-home .sls-home-playground__kicker {
-  color: #cdd6e3;
-  background: rgba(248, 251, 255, 0.08);
+  border-color: rgba(141, 160, 255, 0.22);
+  color: #bdc7ff;
+  background: rgba(68, 100, 240, 0.22);
 }
 
 .dark .sls-observe-home .sls-home-playground__action {

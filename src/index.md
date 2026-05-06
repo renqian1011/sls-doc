@@ -140,21 +140,6 @@ pageClass: sls-observe-home
 ## 智能运维应用 Demo
 
 <div class="vt-box-container next-steps margin-top-20">
-  <a class="vt-box" href="/doc/intelligentom/fullstackintro.html">
-    <p class="next-steps-link">全栈可观测</p>
-    <p class="next-steps-caption">一站式IT系统可观测方案，包含IT系统监控、全链路Trace、智能告警等功能。本文介绍全栈可观测功能的相关信息。
-</p>
-  </a>
-    <a class="vt-box" href="/doc/intelligentom/traceintro.html">
-    <p class="next-steps-link">Trace</p>
-    <p class="next-steps-caption">日志服务提供基于原生OpenTelemetry协议的分布式链路追踪功能，支持各类Trace数据的接入、存储、分析、可视化、告警、人工智能运维等。</p>
-  </a>
-    <a class="vt-box" href="/doc/intelligentom/fullstackintro.html">
-    <p class="next-steps-link">全栈监控</p>
-    <p class="next-steps-caption">全栈监控应用是日志服务提供的一站式IT系统监控方案，监控的目标包括主机监控、Kubernetes监控、数据库监控、中间件监控等。</p>
-  </a>
-</div>
-<div class="vt-box-container next-steps margin-top-20">
     <a class="vt-box" href="/doc/intelligentom/anomalyanalysisintro.html">
     <p class="next-steps-link">智能异常分析</p>
     <p class="next-steps-caption">智能时序异常发现、文本异常模式挖掘、自定义根因分析诊断平台。</p>
