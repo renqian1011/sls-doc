@@ -72,7 +72,12 @@ watchEffect(async () => {
 
 <template>
   <div class="container">
-    <iframe v-if="dest !== ''" :src="dest" :class="{ frame: true, 'max-width': params.maxWidth }">
+    <iframe
+      v-if="dest !== ''"
+      :src="dest"
+      :class="{ frame: true, 'max-width': params.maxWidth }"
+      allow="clipboard-read; clipboard-write"
+    >
     </iframe>
     <div class="tip" v-if="tip">
       {{ tip }}<a :href="productionUrl" target="_blank">{{ productionUrl }}</a>
