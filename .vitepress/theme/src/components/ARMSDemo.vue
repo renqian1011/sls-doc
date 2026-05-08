@@ -63,7 +63,7 @@ watchEffect(async () => {
       v-if="dest !== ''"
       :src="dest"
       :class="{ frame: true, 'max-width': params.maxWidth }"
-      allow="clipboard-read; clipboard-write"
+      allow="clipboard-read *; clipboard-write *"
     >
     </iframe>
     <div class="tip">{{ tip }}</div>

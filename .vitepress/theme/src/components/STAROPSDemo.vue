@@ -7,6 +7,7 @@ import { inBrowser, useData } from 'vitepress'
 const props = defineProps(['workspace', 'region'])
 const workspace = props.workspace ?? 'default-cms-1819385687343877-cn-hongkong'
 const region = props.region ?? 'cn-hongkong'
+const assistantId = 'starops-demo'
 
 const { lang } = useData()
 watchEffect(() => {
@@ -21,7 +22,7 @@ const params = computed(() => {
 
   if (queries == null || queries.dest == null) {
     return {
-      dest: `/`,
+      dest: `/?assistantId=${assistantId}&initWorkspace=${workspace}&hideWorkspaceSwitch=true`,
       theme: 'default',
       maxWidth: false,
     }
@@ -72,7 +73,7 @@ watchEffect(async () => {
       v-if="dest !== ''"
       :src="dest"
       :class="{ frame: true, 'max-width': params.maxWidth }"
-      allow="clipboard-read; clipboard-write"
+      allow="clipboard-read *; clipboard-write *"
     >
     </iframe>
     <div class="tip" v-if="tip">

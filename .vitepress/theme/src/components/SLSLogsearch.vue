@@ -24,7 +24,7 @@ const params = computed(() => {
 </script>
 
 <template>
-  <iframe :src="params.uri" class="frame" allow="clipboard-read; clipboard-write"> </iframe>
+  <iframe :src="params.uri" class="frame" allow="clipboard-read *; clipboard-write *"> </iframe>
 </template>
 
 <style scoped>
