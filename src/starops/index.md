@@ -46,6 +46,19 @@ pageClass: sls-starops-home
   </a>
 </section>
 
+<section class="sls-starops-cta">
+  <div class="sls-starops-cta__inner">
+    <div>
+      <h3 class="sls-starops-cta__title">开始使用 STAROps</h3>
+      <p class="sls-starops-cta__desc">Playground 提供只读演示环境，控制台用于真实配置。</p>
+    </div>
+    <div class="sls-starops-cta__btns">
+      <a class="sls-starops-btn sls-starops-btn--primary" href="https://starops.console.aliyun.com" target="_blank">进入 STAROps 控制台</a>
+      <a class="sls-starops-btn sls-starops-btn--ghost" href="/doc/playground/staropsdemo.html" target="_blank">体验 Playground</a>
+    </div>
+  </div>
+</section>
+
 <section class="sls-starops-section" id="onboarding">
   <div class="sls-starops-section__head">
     <div class="sls-starops-section__title-wrap">
@@ -109,19 +122,6 @@ pageClass: sls-starops-home
     <div class="sls-starops-card sls-starops-card--placeholder">
       <h3 class="sls-starops-card__title">编写 Skill 确定性脚本</h3>
       <p class="sls-starops-card__desc">把单位换算、聚合计算、阈值判断从模型推理改为脚本执行，保证同输入同输出。</p>
-    </div>
-  </div>
-</section>
-
-<section class="sls-starops-cta">
-  <div class="sls-starops-cta__inner">
-    <div>
-      <h3 class="sls-starops-cta__title">开始使用 STAROps</h3>
-      <p class="sls-starops-cta__desc">Playground 提供只读演示环境，控制台用于真实配置。</p>
-    </div>
-    <div class="sls-starops-cta__btns">
-      <a class="sls-starops-btn sls-starops-btn--primary" href="https://starops.console.aliyun.com" target="_blank">进入 STAROps 控制台</a>
-      <a class="sls-starops-btn sls-starops-btn--ghost" href="/doc/playground/staropsdemo.html" target="_blank">体验 Playground</a>
     </div>
   </div>
 </section>

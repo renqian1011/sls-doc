@@ -1730,6 +1730,7 @@
   z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 .sls-starops-home .sls-starops-hero__breadcrumb {
@@ -2171,13 +2172,13 @@
   font-weight: 700;
 }
 
-.sls-starops-home .sls-starops-btn--primary {
+.sls-starops-home .vp-doc a.sls-starops-btn--primary {
   background: linear-gradient(135deg, var(--sls-starops-brand), #6382fd);
   color: #fff;
   box-shadow: 0 6px 18px rgba(68, 100, 240, 0.28);
 }
 
-.sls-starops-home .sls-starops-btn--ghost {
+.sls-starops-home .vp-doc a.sls-starops-btn--ghost {
   border: 1px solid var(--sls-starops-border-strong);
   color: var(--sls-starops-text);
   background: rgba(255,255,255,.92);
@@ -2765,6 +2766,7 @@
   z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 .sls-starops-home .sls-starops-hero__breadcrumb {
@@ -3206,13 +3208,13 @@
   font-weight: 700;
 }
 
-.sls-starops-home .sls-starops-btn--primary {
+.sls-starops-home .vp-doc a.sls-starops-btn--primary {
   background: linear-gradient(135deg, var(--sls-starops-brand), #6382fd);
   color: #fff;
   box-shadow: 0 6px 18px rgba(68, 100, 240, 0.28);
 }
 
-.sls-starops-home .sls-starops-btn--ghost {
+.sls-starops-home .vp-doc a.sls-starops-btn--ghost {
   border: 1px solid var(--sls-starops-border-strong);
   color: var(--sls-starops-text);
   background: rgba(255,255,255,.92);
