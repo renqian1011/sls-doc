@@ -233,8 +233,6 @@ python3 scripts/rds-logs-inspection.py        --list-cases --region test --proje
 
 ## 附录：Path B Replay Prompt
 
-适用模型：STAROps（首选）；Claude Sonnet 4.6 / Opus 4.7 等可写文件、可执行 Python 的 Agent runtime 也可。
-
 使用方式：打开 STAROps，新建对话，整段复制下方 prompt 主体（含起止 `` ``` `` 围栏的全部内容）并发送，等待生成完整 Skill 包（共 10 个文件），下载后对照步骤一的 3 项校验确认产物合规。
 
 ::: details 展开
