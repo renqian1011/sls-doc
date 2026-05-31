@@ -1919,7 +1919,7 @@
 .sls-starops-home .sls-starops-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 64px 24px 0;
+  padding: 36px 24px 0;
 }
 
 .sls-starops-home .sls-starops-section__head {
@@ -1927,8 +1927,8 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 24px;
-  padding-bottom: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--sls-starops-border);
 }
 
@@ -1947,7 +1947,7 @@
   text-transform: uppercase;
 }
 
-.sls-starops-home .sls-starops-section__title {
+.sls-starops-home .vp-doc h2.sls-starops-section__title {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
@@ -2126,8 +2126,8 @@
 
 .sls-starops-home .sls-starops-cta {
   max-width: 1200px;
-  margin: 80px auto 0;
-  padding: 0 24px 40px;
+  margin: 32px auto 0;
+  padding: 0 24px;
 }
 
 .sls-starops-home .sls-starops-cta__inner {
@@ -2955,7 +2955,7 @@
 .sls-starops-home .sls-starops-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 64px 24px 0;
+  padding: 36px 24px 0;
 }
 
 .sls-starops-home .sls-starops-section__head {
@@ -2963,8 +2963,8 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 24px;
-  padding-bottom: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--sls-starops-border);
 }
 
@@ -2983,7 +2983,7 @@
   text-transform: uppercase;
 }
 
-.sls-starops-home .sls-starops-section__title {
+.sls-starops-home .vp-doc h2.sls-starops-section__title {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
@@ -3162,8 +3162,8 @@
 
 .sls-starops-home .sls-starops-cta {
   max-width: 1200px;
-  margin: 80px auto 0;
-  padding: 0 24px 40px;
+  margin: 32px auto 0;
+  padding: 0 24px;
 }
 
 .sls-starops-home .sls-starops-cta__inner {
@@ -3218,6 +3218,19 @@
   border: 1px solid var(--sls-starops-border-strong);
   color: var(--sls-starops-text);
   background: rgba(255,255,255,.92);
+}
+
+.sls-starops-home .sls-starops-hero__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 22px 0 6px;
+}
+
+.sls-starops-home .vp-doc .sls-starops-hero a.sls-starops-btn--ghost {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(185, 195, 255, 0.4);
+  color: rgba(232, 244, 251, 0.96);
 }
 
 .sls-starops-article .sls-starops-article-meta {
@@ -3563,7 +3576,7 @@
 }
 
 .sls-starops-home .sls-starops-section {
-  padding-top: 64px;
+  padding-top: 28px;
 }
 
 .sls-starops-home .sls-starops-cta {

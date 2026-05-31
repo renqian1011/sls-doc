@@ -12,13 +12,18 @@ pageClass: sls-starops-home
     <p class="sls-starops-hero__eyebrow">STAROps Best Practices</p>
     <h1>智能运维场景化<br /><em>最佳实践库</em></h1>
     <p class="sls-starops-hero__lede">STAROps 在常见运维场景下的使用案例。每条实践对应一个真实操作流程，包含步骤说明、配置示例和脚本结构。</p>
+    <div class="sls-starops-hero__actions">
+      <a class="sls-starops-btn sls-starops-btn--primary" href="https://starops.console.aliyun.com" target="_blank">进入 STAROps 控制台</a>
+      <a class="sls-starops-btn sls-starops-btn--ghost" href="/doc/playground/staropsdemo.html" target="_blank">体验 Playground</a>
+    </div>
     <div class="sls-starops-hero__signals" aria-label="实践主题">
-      <span>业务指标守护</span>
+      <span>UModel</span>
+      <span>业务巡检</span>
       <span>告警 RCA</span>
       <span>RDS 巡检</span>
       <span>日志洞察</span>
       <span>MCP 集成</span>
-      <span>UModel · Skill</span>
+      <span>Skill 集成</span>
     </div>
   </div>
 </section>
@@ -46,23 +51,9 @@ pageClass: sls-starops-home
   </a>
 </section>
 
-<section class="sls-starops-cta">
-  <div class="sls-starops-cta__inner">
-    <div>
-      <h3 class="sls-starops-cta__title">开始使用 STAROps</h3>
-      <p class="sls-starops-cta__desc">Playground 提供只读演示环境，控制台用于真实配置。</p>
-    </div>
-    <div class="sls-starops-cta__btns">
-      <a class="sls-starops-btn sls-starops-btn--primary" href="https://starops.console.aliyun.com" target="_blank">进入 STAROps 控制台</a>
-      <a class="sls-starops-btn sls-starops-btn--ghost" href="/doc/playground/staropsdemo.html" target="_blank">体验 Playground</a>
-    </div>
-  </div>
-</section>
-
 <section class="sls-starops-section" id="onboarding">
   <div class="sls-starops-section__head">
     <div class="sls-starops-section__title-wrap">
-      <span class="sls-starops-section__kicker">01 · 入门起步</span>
       <h2 class="sls-starops-section__title">入门起步</h2>
     </div>
   </div>
@@ -78,7 +69,6 @@ pageClass: sls-starops-home
 <section class="sls-starops-section" id="scenarios">
   <div class="sls-starops-section__head">
     <div class="sls-starops-section__title-wrap">
-      <span class="sls-starops-section__kicker">02 · 场景实践</span>
       <h2 class="sls-starops-section__title">场景实践</h2>
     </div>
   </div>
@@ -99,7 +89,6 @@ pageClass: sls-starops-home
 <section class="sls-starops-section" id="integrations">
   <div class="sls-starops-section__head">
     <div class="sls-starops-section__title-wrap">
-      <span class="sls-starops-section__kicker">03 · 扩展集成</span>
       <h2 class="sls-starops-section__title">扩展集成</h2>
     </div>
   </div>
@@ -114,7 +103,6 @@ pageClass: sls-starops-home
 <section class="sls-starops-section" id="platform">
   <div class="sls-starops-section__head">
     <div class="sls-starops-section__title-wrap">
-      <span class="sls-starops-section__kicker">04 · 自定义扩展</span>
       <h2 class="sls-starops-section__title">自定义扩展</h2>
     </div>
   </div>
