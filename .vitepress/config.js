@@ -19,6 +19,7 @@ const getArmsCallAnalysisSider = require('./siderbars/getArmsCallAnalysisSider')
 const getArmsMonitorSider = require('./siderbars/getArmsMonitorSider')
 const getArmsUserSider = require('./siderbars/getArmsUserSider')
 const getArmsPerformanceSider = require('./siderbars/getArmsPerformanceSider')
+const getStaropsSider = require('./siderbars/getStaropsSider')
 
 // 英文导航栏
 const getSqldemoSiderEn = require('./siderbarsEn/getSqldemoSider')
@@ -114,6 +115,7 @@ module.exports = (async () => {
             '/arms/callAnalysis': getArmsCallAnalysisSider(),
             '/arms/user': getArmsUserSider(),
             '/arms/performance': getArmsPerformanceSider(),
+            '/starops/': getStaropsSider(),
           },
 
           editLink: {

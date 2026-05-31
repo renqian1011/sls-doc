@@ -9,3 +9,4 @@ build
 .history
 package-lock.json
 .vitepress/cache
+pnpm-workspace.yaml

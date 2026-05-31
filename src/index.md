@@ -19,12 +19,23 @@ pageClass: sls-observe-home
 </section>
 
 <section class="sls-home-launchpad" aria-label="Playground">
-  <a class="sls-home-playground" href="/doc/playground/staropsdemo.html" target="_blank">
+  <a class="sls-home-playground sls-home-playground--parent" href="/doc/starops/">
     <span class="sls-home-playground__kicker">STAROps</span>
-    <strong>STAROps Playground</strong>
-    <span class="sls-home-playground__summary">多个场景的全域智能运维 Demo，适合快速体验诊断与根因分析工作流。</span>
-    <span class="sls-home-playground__action">启动演示</span>
+    <strong>智能运维最佳实践</strong>
+    <span class="sls-home-playground__summary">STAROps 智能运维在常见运维场景下的使用案例。当前覆盖 RDS 周期性巡检，更多场景持续补充。</span>
+    <span class="sls-home-playground__action">查看最佳实践</span>
   </a>
+  <svg class="sls-home-launchpad__connector" aria-hidden="true" viewBox="0 0 1200 40" preserveAspectRatio="none">
+    <line x1="600" y1="0" x2="600" y2="20"></line>
+    <line x1="200" y1="20" x2="1000" y2="20"></line>
+    <line x1="200" y1="20" x2="200" y2="40"></line>
+    <line x1="600" y1="20" x2="600" y2="40"></line>
+    <line x1="1000" y1="20" x2="1000" y2="40"></line>
+    <circle class="dot-top" cx="600" cy="0" r="2.5"></circle>
+    <circle class="dot-end" cx="200" cy="40" r="3.5"></circle>
+    <circle class="dot-end" cx="600" cy="40" r="3.5"></circle>
+    <circle class="dot-end" cx="1000" cy="40" r="3.5"></circle>
+  </svg>
   <a class="sls-home-playground" href="/doc/playground/cmsdemo.html" target="_blank">
     <span class="sls-home-playground__kicker">CMS 2.0</span>
     <strong>云监控 2.0 Playground</strong>
@@ -33,7 +44,7 @@ pageClass: sls-observe-home
   </a>
   <a class="sls-home-playground" href="/doc/playground/demo.html" target="_blank">
     <span class="sls-home-playground__kicker">SLS</span>
-    <strong>SLS<br />Playground</strong>
+    <strong>SLS Playground</strong>
     <span class="sls-home-playground__summary">完整只读控制台 Demo，包含 CloudLens、日志分析、可视化与智能运维应用。</span>
     <span class="sls-home-playground__action">启动演示</span>
   </a>
