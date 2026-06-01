@@ -10,15 +10,15 @@ pageClass: sls-starops-home
       <span>STAROps</span>
     </div>
     <p class="sls-starops-hero__eyebrow">STAROps Best Practices</p>
-    <h1>智能运维场景化<br /><em>最佳实践库</em></h1>
-    <p class="sls-starops-hero__lede">STAROps 在常见运维场景下的使用案例。每条实践对应一个真实操作流程，包含步骤说明、配置示例和脚本结构。</p>
+    <h1>Agentic Ops<br /><em>最佳实践</em></h1>
+    <p class="sls-starops-hero__lede">STAROps 在常见 Agentic Ops 场景下的使用案例。涵盖从入门到精通、从主动对话到异步任务、从巡检到业务守护的各类最佳实践。</p>
     <div class="sls-starops-hero__actions">
       <a class="sls-starops-btn sls-starops-btn--primary" href="https://starops.console.aliyun.com" target="_blank">进入 STAROps 控制台</a>
       <a class="sls-starops-btn sls-starops-btn--ghost" href="/doc/playground/staropsdemo.html" target="_blank">体验 Playground</a>
     </div>
     <div class="sls-starops-hero__signals" aria-label="实践主题">
       <span>UModel</span>
-      <span>业务巡检</span>
+      <span>服务巡检</span>
       <span>告警 RCA</span>
       <span>RDS 巡检</span>
       <span>日志洞察</span>
@@ -45,8 +45,8 @@ pageClass: sls-starops-home
     <span class="sls-starops-scene-card__cta">查看实践</span>
   </a>
   <a class="sls-starops-scene-card" href="#platform" data-tone="amber">
-    <h2>自定义扩展</h2>
-    <p>把团队流程写成 Skill、把指标写成 UModel、把判断写成确定性脚本。</p>
+    <h2>平台沉淀</h2>
+    <p>运维知识固化为平台资产，让 Agent 沿确定性轨道执行，结果可预期、可复跑。</p>
     <span class="sls-starops-scene-card__cta">查看实践</span>
   </a>
 </section>
@@ -79,8 +79,8 @@ pageClass: sls-starops-home
       <span class="sls-starops-card__cta">查看文档</span>
     </a>
     <a class="sls-starops-card" href="/doc/starops/practices/business-reliability-flow/article">
-      <h3 class="sls-starops-card__title">业务可靠性守护</h3>
-      <p class="sls-starops-card__desc">在同一 thread 内按 5 Phase 串接业务指标基线 → 应用指标关联 → 依赖拓扑 → 告警事件 → 综合报告，依托 APM 指标与 UModel 语义化拓扑产出含 SLO 评估与行动项的业务可靠性报告。</p>
+      <h3 class="sls-starops-card__title">业务服务可靠性巡检</h3>
+      <p class="sls-starops-card__desc">在同一 thread 内按 5 Phase 串接业务指标基线 → 应用指标关联 → 依赖拓扑 → 告警事件 → 综合报告，依托 ARMS APM 指标与 UModel 语义化拓扑产出含 SLO 评估与行动项的服务可靠性报告。</p>
       <span class="sls-starops-card__cta">查看文档</span>
     </a>
   </div>
@@ -103,7 +103,7 @@ pageClass: sls-starops-home
 <section class="sls-starops-section" id="platform">
   <div class="sls-starops-section__head">
     <div class="sls-starops-section__title-wrap">
-      <h2 class="sls-starops-section__title">自定义扩展</h2>
+      <h2 class="sls-starops-section__title">平台沉淀</h2>
     </div>
   </div>
   <div class="sls-starops-grid sls-starops-grid--three">
