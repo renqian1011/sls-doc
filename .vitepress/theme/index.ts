@@ -21,7 +21,7 @@ export default {
         'RDS 周期性自动巡检': 'PUBLISHED v1.0',
         '告警 RCA 全链路分析': 'DRAFT',
         '日志模式巡检': 'DRAFT',
-        '业务可靠性守护': 'DRAFT',
+        '业务服务可靠性巡检': 'DRAFT',
         'MCP 集成治理 Checklist': 'WIP · 模板态',
         'UModel 指标语义与实体拓扑': 'DRAFT',
         '编写 STAROps 运维 Skill': 'DRAFT',

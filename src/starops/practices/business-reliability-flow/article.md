@@ -3,39 +3,39 @@ pageClass: sls-starops-article
 status: published
 journey: 场景实践
 id: business-reliability-flow
-title: 业务可靠性守护
+title: 业务服务可靠性巡检
 ---
 
 <div class="sls-starops-article-crumb">
   <a href="/doc/starops/">STAROps</a> <span class="sep">/</span> <span>场景实践</span>
 </div>
 
-# 业务可靠性守护
+# 业务服务可靠性巡检
 
 <div class="sls-starops-article-meta">
   <span>分类 · 场景实践</span>
 </div>
 
-当您需要对核心业务服务（订单、支付、登录等）做定期可靠性评估，判断业务指标是否偏离正常范围、并在偏离时定位到具体的应用层与依赖层根因时，可以在 STAROps 里按 5 个 Phase 串起来：业务指标基线 → 应用指标关联 → 依赖拓扑分析 → 告警事件聚合 → 综合可靠性报告。流程依赖 APM 指标与 UModel 拓扑：取数、关联、归因均由 Agent 完成，同一 thread 内逐 Phase 累积上下文，产出含 SLO 达标率、风险点和行动项的业务可靠性报告。
+当您需要对核心业务服务（订单、支付、登录等）做定期可靠性评估，判断业务指标是否偏离正常范围、并在偏离时定位到具体的应用层与依赖层根因时，可以在 STAROps 里按 5 个 Phase 串起来：业务指标基线 → 应用指标关联 → 依赖拓扑分析 → 告警事件聚合 → 综合可靠性报告。流程依赖 ARMS APM 指标与 UModel 拓扑：取数、关联、归因均由 Agent 完成，同一 thread 内逐 Phase 累积上下文，产出含 SLO 达标率、风险点和行动项的服务可靠性报告。
 
 > 这是一条**主动发现**路径：从业务指标出发追溯到基础设施，与告警驱动的被动排查方向相反。两者互补——告警排查解决"已经发生的问题"，业务守护发现"可能恶化的趋势"。
 
 ## 前提条件
 
 - 已开通 STAROps，且当前账号可创建数字员工与对话。
-- 核心业务服务已接入 STAROps APM，可查询到 QPS / 成功率 / P99 延迟。
+- 核心业务服务已接入 ARMS APM，可查询到 QPS、成功率，以及根据业务特点选择的延迟分位数（PXX，如 P95、P99 等）。
 - 服务之间的依赖拓扑可查（trace 数据已接入 UModel，采样率不宜过低）。
 - 已确认切入服务的名称（如 `checkout` / `frontend` / `payment`），切入点应是核心业务链路的入口服务，而非底层依赖。
 
-## 涉及的 Skill
+## 安装 Skill
 
-完成本实践会落地一份 SOP Skill（本实践产物是业务可靠性报告，无可执行业务 Skill）：
+完成本实践会落地一份 SOP Skill（本实践产物是服务可靠性报告，无可执行业务 Skill）。安装方式任选其一：本地 Agent 走 [`npx skills`](https://www.npmjs.com/package/skills)，STAROps 数字员工下载 tar.gz 后在控制台「技能管理 → 上传技能」上传。
 
-| Skill | 下载 | 作用 |
-|---|---|---|
-| `business-reliability-flow-sop` | [business-reliability-flow-sop.tar.gz](https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/business-reliability-flow/docs/business-reliability-flow-sop.tar.gz) | 引导 Skill：教 Agent 按 5 个 Phase 协助用户完成"业务指标 → 应用指标 → 依赖拓扑 → 告警事件 → 综合报告"的端到端分析，最终在 STAROps 中产出一份业务可靠性报告。 |
+| Skill | 作用 | 本地 Agent（npx） | STAROps 控制台（tar.gz） |
+|---|---|---|---|
+| `service-reliability-flow-sop` | 引导 Skill：教 Agent 按 5 个 Phase 协助用户完成"业务指标 → 应用指标 → 依赖拓扑 → 告警事件 → 综合报告"的端到端分析，最终在 STAROps 中产出一份服务可靠性报告。 | `npx skills add aliyun-sls/sls-doc --skill service-reliability-flow-sop` | [service-reliability-flow-sop.tar.gz](https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/business-reliability-flow/docs/service-reliability-flow-sop.tar.gz) |
 
-下载 tar.gz 包后解压上传到对应数字员工，启用即可。下文步骤一到步骤五的提问模板与闭环 checklist 与该 SOP 一一对应。
+下文步骤一到步骤五的提问模板与闭环 checklist 与该 SOP 一一对应。
 
 ## 5 Phase 概览
 
@@ -53,11 +53,11 @@ title: 业务可靠性守护
 
 目标：对核心业务服务的关键业务指标做基线分析，判断是否偏离正常范围。
 
-1. 进入 STAROps 控制台 → 数字员工 → 选择已启用 `business-reliability-flow-sop` 的数字员工 → 新建对话。
+1. 进入 STAROps 控制台 → 数字员工 → 选择已启用 `service-reliability-flow-sop` 的数字员工 → 新建对话。
 2. 在会话框中发送以下提问（把 `<服务名>` 替换为实际入口服务名，把 `<时间范围>` / `<基线天数>` 替换为实际值）：
 
    ```
-   @应用-<服务名> 对最近 <时间范围> 的核心业务指标做基线分析：QPS、成功率、P99 延迟，对比前 <基线天数> 同期基线，判断是否偏离正常范围
+   @应用-<服务名> 对最近 <时间范围> 的核心业务指标做基线分析：QPS、成功率、延迟 PXX（根据业务特点选择分位数），对比前 <基线天数> 同期基线，判断是否偏离正常范围
    ```
 
 3. 等待 Agent 返回业务指标基线表，确认包含：指标清单覆盖 QPS / 成功率 / 延迟；每项有当前值与基线值的定量对比；偏离状态有显式标注。
@@ -79,7 +79,7 @@ title: 业务可靠性守护
 1. 在**同一 thread** 内继续发送提问：
 
    ```
-   @应用-<服务名> 基于业务指标基线分析结果，关联最近 <时间范围> 的应用层指标（错误率 / QPS / P99 延迟 / 实例数 / CPU / 内存），定位哪些应用指标异常可能影响业务
+   @应用-<服务名> 基于业务指标基线分析结果，关联最近 <时间范围> 的应用层指标（错误率 / QPS / 延迟 PXX / 实例数 / CPU / 内存），定位哪些应用指标异常可能影响业务
    ```
 
 2. 等待 Agent 返回应用指标关联表，确认包含：应用指标与业务指标的关联分析；显式标注因果关系（哪个应用异常影响哪个业务指标）；异常按对业务的影响程度排序。
@@ -134,12 +134,12 @@ title: 业务可靠性守护
 
 ## 步骤五：综合可靠性报告
 
-目标：综合前 4 个 Phase 的分析结果，给出业务可靠性评估报告。
+目标：综合前 4 个 Phase 的分析结果，给出服务可靠性评估报告。
 
 1. 在**同一 thread** 内继续发送提问：
 
    ```
-   @应用-<服务名> 综合最近 <时间范围> 的业务指标基线、应用指标关联、依赖拓扑分析和告警事件，给出一份业务可靠性评估报告：包含整体健康判断、SLO 达标率评估、风险点、影响范围和行动建议
+   @应用-<服务名> 综合最近 <时间范围> 的业务指标基线、应用指标关联、依赖拓扑分析和告警事件，给出一份服务可靠性评估报告：包含整体健康判断、SLO 达标率评估、风险点、影响范围和行动建议
    ```
 
 2. 等待 Agent 返回综合评估报告，确认包含：整体健康状态表（业务指标 / 应用健康 / 依赖稳定性 / 告警态势）；SLO 达标率评估；风险点按优先级排列并附行动项；影响范围覆盖服务 / 用户 / 功能。
@@ -150,7 +150,7 @@ title: 业务可靠性守护
 
 :::
 
-产出物：完整的业务可靠性报告。建议另存或导出归档（截图、转 PDF、复制到飞书/Wiki 均可）。
+产出物：完整的服务可靠性报告。建议另存或导出归档（截图、转 PDF、复制到飞书/Wiki 均可）。
 
 ### 闭环验证 checklist
 

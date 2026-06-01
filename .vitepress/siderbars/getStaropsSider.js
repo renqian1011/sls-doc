@@ -8,7 +8,7 @@ function getSidebar() {
       text: '场景实践',
       items: [
         { text: 'RDS 周期性自动巡检', link: '/starops/practices/rds-inspection-via-script/article' },
-        { text: '业务可靠性守护', link: '/starops/practices/business-reliability-flow/article' },
+        { text: '业务服务可靠性巡检', link: '/starops/practices/business-reliability-flow/article' },
       ],
     },
     {

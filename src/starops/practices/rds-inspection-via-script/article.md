@@ -24,16 +24,16 @@ title: RDS 周期性自动巡检
 - 阿里云 RDS 实例的监控数据已接入 STAROps，可在助手中查询到指标。
 - 至少有一个可达的通知通道：联系人、群机器人或 Webhook 任选其一。
 
-## 涉及的两个 Skill
+## 安装 Skill
 
-完成本实践会落地两份 Skill，二者职责不同，不能互相替代：
+完成本实践会落地两份 Skill，二者职责不同，不能互相替代。安装方式任选其一：本地 Agent 走 [`npx skills`](https://www.npmjs.com/package/skills)，STAROps 数字员工下载 tar.gz 后在控制台「技能管理 → 上传技能」上传。
 
-| Skill | 下载 | 作用 |
-|---|---|---|
-| `rds-inspection` | [rds-inspection.tar.gz](https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/rds-inspection-via-script/docs/rds-inspection.tar.gz) | 业务 Skill：调度脚本批量执行 21 项 RDS 巡检，输出结构化 JSON；异常项附带原始采样与上下游拓扑。 |
-| `rds-inspection-via-script-sop` | [rds-inspection-via-script-sop.tar.gz](https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/rds-inspection-via-script/docs/rds-inspection-via-script-sop.tar.gz) | 引导 Skill：教 Agent 按 5 步 SOP 协助用户走完整流程，最终在 STAROps 中产生一个活跃的周期性巡检任务。 |
+| Skill | 作用 | 本地 Agent（npx） | STAROps 控制台（tar.gz） |
+|---|---|---|---|
+| `rds-inspection` | 业务 Skill：调度脚本批量执行 21 项 RDS 巡检，输出结构化 JSON；异常项附带原始采样与上下游拓扑。 | `npx skills add aliyun-sls/sls-doc --skill rds-inspection` | [rds-inspection.tar.gz](https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/rds-inspection-via-script/docs/rds-inspection.tar.gz) |
+| `rds-inspection-via-script-sop` | 引导 Skill：教 Agent 按 5 步 SOP 协助用户走完整流程，最终在 STAROps 中产生一个活跃的周期性巡检任务。 | `npx skills add aliyun-sls/sls-doc --skill rds-inspection-via-script-sop` | [rds-inspection-via-script-sop.tar.gz](https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/rds-inspection-via-script/docs/rds-inspection-via-script-sop.tar.gz) |
 
-下文步骤一所述的脚本包即为 meta Skill；点击表格中的下载链接即可获取 tar.gz 包，解压后直接上传至数字员工。SOP Skill 的具体动作（任务输入模板、闭环 checklist）在步骤三和步骤五中给出。
+下文步骤一围绕 `rds-inspection` 业务 Skill 的脚本包展开；`rds-inspection-via-script-sop` SOP Skill 的具体动作（任务输入模板、闭环 checklist）在步骤三和步骤五中给出。
 
 ## 步骤一：准备 RDS 巡检脚本包
 
@@ -61,7 +61,7 @@ rds-inspection/
 
 获取方式二选一：
 
-- **Path A**：直接下载现成样品包，开箱即用 —— [rds-inspection.tar.gz](https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/rds-inspection-via-script/docs/rds-inspection.tar.gz)，解压后即得到下方所示目录结构。
+- **Path A**：直接复用现成样品包，开箱即用 —— 上文「安装 Skill」表格里给的 `npx skills add` 或 tar.gz 下载链接二选一即可。
 - **Path B**：在 STAROps 里按预置 Replay Prompt 现场生成一份；产物结构与 Path A 一致。完整 prompt 见 [附录：Path B Replay Prompt](#附录-path-b-replay-prompt)，整段粘到 STAROps 新建对话即可，不要截断也不要改写要素。
 
 无论走哪条路径，上传前在脚本目录执行以下两条命令做本地校验：
@@ -162,8 +162,6 @@ python3 scripts/rds-logs-inspection.py        --list-cases --region test --proje
 
 :::
 
-完整报告样例见 [`assets/sample-report.md`](./assets/sample-report.md)（一次真实巡检：14 个 RDS MySQL 实例、21 项检查）。
-
 ### 闭环验证 checklist
 
 以下 4 件事全部为「是」才算闭环成立，任一为「否」回到对应步骤复查：
@@ -233,12 +231,12 @@ python3 scripts/rds-logs-inspection.py        --list-cases --region test --proje
 
 ## 附录：Path B Replay Prompt
 
-使用方式：打开 STAROps，新建对话，整段复制下方 prompt 主体（含起止 `` ``` `` 围栏的全部内容）并发送，等待生成完整 Skill 包（共 10 个文件），下载后对照步骤一的 3 项校验确认产物合规。
+使用方式：打开 STAROps，新建对话，整段复制下方 prompt 主体（含起止 `` ``` `` 围栏的全部内容）并发送，等待生成完整 Skill 包（共 12 个文件：1 份 SKILL.md + 5 个 Python 脚本 + 6 份参考资料），下载后对照步骤一的 3 项校验确认产物合规。
 
 ::: details 展开
 
 ````markdown
-# 重放 Prompt（复制给任意 Agent）
+# 重放 Prompt
 
 请基于以下要求，完整构建一个可用的 `rds-inspection` Skill。不要只给方案，直接产出完整文件内容、目录结构、验证步骤和测试结果格式。
 

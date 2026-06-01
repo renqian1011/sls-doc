@@ -19,12 +19,15 @@ pageClass: sls-observe-home
 </section>
 
 <section class="sls-home-launchpad" aria-label="Playground">
-  <a class="sls-home-playground sls-home-playground--parent" href="/doc/starops/">
+  <div class="sls-home-playground sls-home-playground--parent">
     <span class="sls-home-playground__kicker">STAROps</span>
-    <strong>智能运维最佳实践</strong>
-    <span class="sls-home-playground__summary">STAROps 智能运维在常见运维场景下的使用案例。当前覆盖 RDS 周期性巡检，更多场景持续补充。</span>
-    <span class="sls-home-playground__action">查看最佳实践</span>
-  </a>
+    <strong>Agentic Ops 最佳实践</strong>
+    <span class="sls-home-playground__summary">STAROps 在常见 Agentic Ops 场景下的使用案例。涵盖从入门到精通、从主动对话到异步任务、从巡检到业务守护的各类最佳实践。</span>
+    <div class="sls-home-playground__actions">
+      <a class="sls-home-playground__action" href="/doc/starops/">最佳实践</a>
+      <a class="sls-home-playground__action no-icon" href="/doc/playground/staropsdemo.html" target="_blank">启动演示</a>
+    </div>
+  </div>
   <svg class="sls-home-launchpad__connector" aria-hidden="true" viewBox="0 0 1200 40" preserveAspectRatio="none">
     <line x1="600" y1="0" x2="600" y2="20"></line>
     <line x1="200" y1="20" x2="1000" y2="20"></line>
