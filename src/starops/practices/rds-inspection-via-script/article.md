@@ -30,8 +30,8 @@ title: RDS 周期性自动巡检
 
 | Skill | 作用 | 本地 Agent（npx） | STAROps 控制台（tar.gz） |
 |---|---|---|---|
-| `rds-inspection` | 业务 Skill：调度脚本批量执行 21 项 RDS 巡检，输出结构化 JSON；异常项附带原始采样与上下游拓扑。 | `npx skills add aliyun-sls/sls-doc --skill rds-inspection` | [rds-inspection.tar.gz](https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/rds-inspection-via-script/docs/rds-inspection.tar.gz) |
-| `rds-inspection-via-script-sop` | 引导 Skill：教 Agent 按 5 步 SOP 协助用户走完整流程，最终在 STAROps 中产生一个活跃的周期性巡检任务。 | `npx skills add aliyun-sls/sls-doc --skill rds-inspection-via-script-sop` | [rds-inspection-via-script-sop.tar.gz](https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/rds-inspection-via-script/docs/rds-inspection-via-script-sop.tar.gz) |
+| `rds-inspection` | 业务 Skill：调度脚本批量执行 21 项 RDS 巡检，输出结构化 JSON；异常项附带原始采样与上下游拓扑。 | `npx skills add aliyun-sls/sls-doc-skills --skill rds-inspection` | [rds-inspection.tar.gz](https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/rds-inspection-via-script/docs/rds-inspection.tar.gz) |
+| `rds-inspection-via-script-sop` | 引导 Skill：教 Agent 按 5 步 SOP 协助用户走完整流程，最终在 STAROps 中产生一个活跃的周期性巡检任务。 | `npx skills add aliyun-sls/sls-doc-skills --skill rds-inspection-via-script-sop` | [rds-inspection-via-script-sop.tar.gz](https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/rds-inspection-via-script/docs/rds-inspection-via-script-sop.tar.gz) |
 
 下文步骤一围绕 `rds-inspection` 业务 Skill 的脚本包展开；`rds-inspection-via-script-sop` SOP Skill 的具体动作（任务输入模板、闭环 checklist）在步骤三和步骤五中给出。
 

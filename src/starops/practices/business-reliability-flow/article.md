@@ -33,7 +33,7 @@ title: 业务服务可靠性巡检
 
 | Skill | 作用 | 本地 Agent（npx） | STAROps 控制台（tar.gz） |
 |---|---|---|---|
-| `service-reliability-flow-sop` | 引导 Skill：教 Agent 按 5 个 Phase 协助用户完成"业务指标 → 应用指标 → 依赖拓扑 → 告警事件 → 综合报告"的端到端分析，最终在 STAROps 中产出一份服务可靠性报告。 | `npx skills add aliyun-sls/sls-doc --skill service-reliability-flow-sop` | [service-reliability-flow-sop.tar.gz](https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/business-reliability-flow/docs/service-reliability-flow-sop.tar.gz) |
+| `service-reliability-flow-sop` | 引导 Skill：教 Agent 按 5 个 Phase 协助用户完成"业务指标 → 应用指标 → 依赖拓扑 → 告警事件 → 综合报告"的端到端分析，最终在 STAROps 中产出一份服务可靠性报告。 | `npx skills add aliyun-sls/sls-doc-skills --skill service-reliability-flow-sop` | [service-reliability-flow-sop.tar.gz](https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/business-reliability-flow/docs/service-reliability-flow-sop.tar.gz) |
 
 下文步骤一到步骤五的提问模板与闭环 checklist 与该 SOP 一一对应。
 
