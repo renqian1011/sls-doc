@@ -5,7 +5,7 @@ pageClass: sls-starops-home
 <section class="sls-starops-hero">
   <div class="sls-starops-hero__content">
     <div class="sls-starops-hero__breadcrumb">
-      <a href="/doc/">阿里云可观测</a>
+      <a href="/doc/index.html">阿里云可观测</a>
       <span>/</span>
       <span>STAROps</span>
     </div>
@@ -58,7 +58,7 @@ pageClass: sls-starops-home
     </div>
   </div>
   <div class="sls-starops-grid sls-starops-grid--three">
-    <a class="sls-starops-card" href="/doc/starops/onboarding/effective-prompts/article">
+    <a class="sls-starops-card" href="/doc/starops/onboarding/effective-prompts/article.html">
       <h3 class="sls-starops-card__title">与 STAROps 有效对话</h3>
       <p class="sls-starops-card__desc">写给 STAROps 的 6 条 prompt 原则，配反例 / 正例对照与可直接套用的模板，让 Agent 一次拿到正确实体、走完正确推理路径。</p>
       <span class="sls-starops-card__cta">查看文档</span>
@@ -73,12 +73,12 @@ pageClass: sls-starops-home
     </div>
   </div>
   <div class="sls-starops-grid sls-starops-grid--three">
-    <a class="sls-starops-card" href="/doc/starops/practices/rds-inspection-via-script/article">
+    <a class="sls-starops-card" href="/doc/starops/practices/rds-inspection-via-script/article.html">
       <h3 class="sls-starops-card__title">RDS 周期性自动巡检</h3>
       <p class="sls-starops-card__desc">用数字员工 + 长期任务自动调度巡检脚本，覆盖核心指标、性能、安全共 19 项检查。结果可通过邮件、群机器人或 Webhook 送达。</p>
       <span class="sls-starops-card__cta">查看文档</span>
     </a>
-    <a class="sls-starops-card" href="/doc/starops/practices/business-reliability-flow/article">
+    <a class="sls-starops-card" href="/doc/starops/practices/business-reliability-flow/article.html">
       <h3 class="sls-starops-card__title">业务服务可靠性巡检</h3>
       <p class="sls-starops-card__desc">在同一 thread 内按 5 Phase 串接业务指标基线 → 应用指标关联 → 依赖拓扑 → 告警事件 → 综合报告，依托 ARMS APM 指标与 UModel 语义化拓扑产出含 SLO 评估与行动项的服务可靠性报告。</p>
       <span class="sls-starops-card__cta">查看文档</span>

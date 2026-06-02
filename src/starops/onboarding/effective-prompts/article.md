@@ -7,7 +7,7 @@ title: 与 STAROps 有效对话
 ---
 
 <div class="sls-starops-article-crumb">
-  <a href="/doc/starops/">STAROps</a> <span class="sep">/</span> <span>入门起步</span>
+  <a href="/doc/starops/index.html">STAROps</a> <span class="sep">/</span> <span>入门起步</span>
 </div>
 
 # 与 STAROps 有效对话
@@ -123,6 +123,6 @@ title: 与 STAROps 有效对话
 
 ## 相关入口
 
-- [返回 STAROps 最佳实践首页](/starops/)
+- [返回 STAROps 最佳实践首页](/starops/index.html)
 - [打开 STAROps Playground](/playground/staropsdemo.html)
 - [进入 STAROps 控制台](https://starops.console.aliyun.com)

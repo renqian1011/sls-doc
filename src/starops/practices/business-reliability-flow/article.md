@@ -7,7 +7,7 @@ title: 业务服务可靠性巡检
 ---
 
 <div class="sls-starops-article-crumb">
-  <a href="/doc/starops/">STAROps</a> <span class="sep">/</span> <span>场景实践</span>
+  <a href="/doc/starops/index.html">STAROps</a> <span class="sep">/</span> <span>场景实践</span>
 </div>
 
 # 业务服务可靠性巡检
@@ -188,6 +188,6 @@ title: 业务服务可靠性巡检
 
 ## 相关入口
 
-- [返回 STAROps 最佳实践首页](/starops/)
+- [返回 STAROps 最佳实践首页](/starops/index.html)
 - [打开 STAROps Playground](/playground/staropsdemo.html)
 - [进入 STAROps 控制台](https://starops.console.aliyun.com)
