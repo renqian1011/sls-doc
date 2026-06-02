@@ -24,7 +24,7 @@ pageClass: sls-observe-home
     <strong>Agentic Ops 最佳实践</strong>
     <span class="sls-home-playground__summary">STAROps 在常见 Agentic Ops 场景下的使用案例。涵盖从入门到精通、从主动对话到异步任务、从巡检到业务守护的各类最佳实践。</span>
     <div class="sls-home-playground__actions">
-      <a class="sls-home-playground__action" href="/doc/starops/">最佳实践</a>
+      <a class="sls-home-playground__action" href="/doc/starops/index.html">最佳实践</a>
       <a class="sls-home-playground__action no-icon" href="/doc/playground/staropsdemo.html" target="_blank">启动演示</a>
     </div>
   </div>
