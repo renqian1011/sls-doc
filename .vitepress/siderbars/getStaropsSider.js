@@ -9,6 +9,8 @@ function getSidebar() {
       items: [
         { text: 'RDS 周期性自动巡检', link: '/starops/practices/rds-inspection-via-script/article' },
         { text: '业务服务可靠性巡检', link: '/starops/practices/business-reliability-flow/article' },
+        { text: '告警 RCA 全链路分析', link: '/starops/practices/alert-rca-flow/article' },
+        { text: 'UModel 指标语义与实体拓扑', link: '/starops/practices/umodel-metric-entity/article' },
       ],
     },
     {

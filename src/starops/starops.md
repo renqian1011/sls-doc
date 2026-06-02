@@ -83,6 +83,16 @@ pageClass: sls-starops-home
       <p class="sls-starops-card__desc">在同一 thread 内按 5 Phase 串接业务指标基线 → 应用指标关联 → 依赖拓扑 → 告警事件 → 综合报告，依托 ARMS APM 指标与 UModel 语义化拓扑产出含 SLO 评估与行动项的服务可靠性报告。</p>
       <span class="sls-starops-card__cta">查看文档</span>
     </a>
+    <a class="sls-starops-card" href="/doc/starops/practices/alert-rca-flow/article.html">
+      <h3 class="sls-starops-card__title">告警 RCA 全链路分析</h3>
+      <p class="sls-starops-card__desc">告警触发后，在同一 thread 内按 6 Phase 串接分诊 → 数据确认 → 根因定位 → 证据采集 → 修复建议 → 复盘治理，跨指标 / 日志 / trace 关联归因，产出含根因假设、证据包与 Action Items 的 RCA 报告。</p>
+      <span class="sls-starops-card__cta">查看文档</span>
+    </a>
+    <a class="sls-starops-card" href="/doc/starops/practices/umodel-metric-entity/article.html">
+      <h3 class="sls-starops-card__title">UModel 指标语义与实体拓扑</h3>
+      <p class="sls-starops-card__desc">通过 5 个正反例样例覆盖 STAROps 中 @ 实体提问的 5 类常见场景：单位 / 聚合口径 / 实体维度 / 拓扑链 / UModel 缺失字段，附实测回包截图与受影响应用清单。</p>
+      <span class="sls-starops-card__cta">查看文档</span>
+    </a>
   </div>
 </section>
 
