@@ -1908,7 +1908,7 @@
 
 .sls-starops-home .sls-starops-scene-card__cta {
   color: var(--sls-starops-brand);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -2106,6 +2106,7 @@
 
 .sls-starops-home .sls-starops-card__cta {
   color: var(--sls-starops-brand);
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -2944,7 +2945,7 @@
 
 .sls-starops-home .sls-starops-scene-card__cta {
   color: var(--sls-starops-brand);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -3142,6 +3143,7 @@
 
 .sls-starops-home .sls-starops-card__cta {
   color: var(--sls-starops-brand);
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -3499,7 +3501,7 @@
 }
 
 .sls-starops-home .sls-starops-hero {
-  padding-top: 96px;
+  padding-top: 48px;
   padding-bottom: 168px;
 }
 
@@ -3605,6 +3607,10 @@
 
 .sls-starops-home .sls-starops-section {
   padding-top: 28px;
+}
+
+.sls-starops-home .sls-starops-section:last-of-type {
+  padding-bottom: 96px;
 }
 
 .sls-starops-home .sls-starops-cta {
