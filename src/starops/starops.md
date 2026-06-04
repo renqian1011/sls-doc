@@ -108,10 +108,11 @@ pageClass: sls-starops-home
     </div>
   </div>
   <div class="sls-starops-grid sls-starops-grid--three">
-    <div class="sls-starops-card sls-starops-card--placeholder">
-      <h3 class="sls-starops-card__title">MCP 集成与治理检查清单</h3>
-      <p class="sls-starops-card__desc">MCP 接入前必须确认的范围、边界、通知与回滚四项底线。</p>
-    </div>
+    <a class="sls-starops-card" href="/doc/starops/practices/mcp-integration/article.html">
+      <h3 class="sls-starops-card__title">接入外部 MCP 工具</h3>
+      <p class="sls-starops-card__desc">外部 MCP Server 一次接入、所有数字员工复用：5 步接入流程 + 5 项接入前检查 + 4 类执行策略匹配。</p>
+      <span class="sls-starops-card__cta">查看文档</span>
+    </a>
   </div>
 </section>
 
