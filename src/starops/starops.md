@@ -113,6 +113,11 @@ pageClass: sls-starops-home
       <p class="sls-starops-card__desc">外部 MCP Server 一次接入、所有数字员工复用：5 步接入流程 + 5 项接入前检查 + 4 类执行策略匹配。</p>
       <span class="sls-starops-card__cta">查看文档</span>
     </a>
+    <a class="sls-starops-card" href="/doc/starops/practices/dingtalk-integration/article.html">
+      <h3 class="sls-starops-card__title">集成钉钉 IM 通道</h3>
+      <p class="sls-starops-card__desc">钉钉应用 + AppFlow 连接流 + STAROps 数字员工三平台串联，4 步完成企业 IM 内对话式运维。</p>
+      <span class="sls-starops-card__cta">查看文档</span>
+    </a>
   </div>
 </section>
 
