@@ -16,7 +16,10 @@ function getSidebar() {
     },
     {
       text: '扩展集成',
-      items: [{ text: '接入外部 MCP 工具', link: '/starops/practices/mcp-integration/article' }],
+      items: [
+        { text: '接入外部 MCP 工具', link: '/starops/practices/mcp-integration/article' },
+        { text: '集成钉钉 IM 通道', link: '/starops/practices/dingtalk-integration/article' },
+      ],
     },
     {
       text: '平台沉淀',
