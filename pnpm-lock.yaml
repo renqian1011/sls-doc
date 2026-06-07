@@ -8,9 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@aliyun-obv/app-loader-proxy':
+        specifier: ^1.0.9
+        version: 1.0.9
       '@aliyun-sls/docsearch-js':
         specifier: 1.0.2
-        version: 1.0.2(@algolia/client-search@5.20.3)
+        version: 1.0.2(@algolia/client-search@5.20.3)(react-dom@16.13.1(react@16.13.1))(react@16.13.1)
       '@aliyun-sls/rum-core':
         specifier: ^0.0.11
         version: 0.0.11
@@ -35,6 +38,12 @@ importers:
       normalize.css:
         specifier: ^8.0.1
         version: 8.0.1
+      react:
+        specifier: 16.13.1
+        version: 16.13.1
+      react-dom:
+        specifier: 16.13.1
+        version: 16.13.1(react@16.13.1)
       sitemap:
         specifier: ^7.1.1
         version: 7.1.1
@@ -71,7 +80,7 @@ importers:
         version: 4.9.5
       vitepress:
         specifier: ^1.6.3
-        version: 1.6.3(@algolia/client-search@5.20.3)(postcss@8.5.2)(search-insights@2.13.0)(typescript@4.9.5)
+        version: 1.6.3(@algolia/client-search@5.20.3)(postcss@8.5.2)(react-dom@16.13.1(react@16.13.1))(react@16.13.1)(search-insights@2.13.0)(typescript@4.9.5)
       vue:
         specifier: ^3.4.19
         version: 3.4.19(typescript@4.9.5)
@@ -203,6 +212,9 @@ packages:
 
   '@algolia/transporter@4.22.1':
     resolution: {integrity: sha512-kzWgc2c9IdxMa3YqA6TN0NW5VrKYYW/BELIn7vnLyn+U/RFdZ4lxxt9/8yq3DKV5snvoDzzO4ClyejZRdV3lMQ==}
+
+  '@aliyun-obv/app-loader-proxy@1.0.9':
+    resolution: {integrity: sha512-NKJVB10RnErzltLpX8RMA4+ujaLQLcrriNyLgwlYVpgbV7FmmtRG9g+QZRORohfP9GCVVt2GP+z/EjfDffcaJA==}
 
   '@aliyun-sls/docsearch-js@1.0.2':
     resolution: {integrity: sha512-+B/+r2xW6JeiRLN8wLLPdzB3PSzW40rURv+4e+73JGPPFC8f9+17RXf1/bXAyS6AitMiqMCRwp0EKm7dc2TpAg==}
@@ -909,6 +921,13 @@ packages:
     resolution: {integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==}
     engines: {node: '>=14'}
 
+  js-tokens@4.0.0:
+    resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+
+  loose-envify@1.4.0:
+    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
+    hasBin: true
+
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
@@ -974,6 +993,10 @@ packages:
   normalize.css@8.0.1:
     resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
 
+  object-assign@4.1.1:
+    resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
+    engines: {node: '>=0.10.0'}
+
   once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
 
@@ -1013,11 +1036,26 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
+  prop-types@15.8.1:
+    resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
+
   property-information@6.5.0:
     resolution: {integrity: sha512-PgTgs/BlvHxOu8QuEN7wi5A0OmXaBcHpmCSTehcs6Uuu9IkDIEo13Hy7n898RHfrQ49vKCoGeWZSaAK01nwVig==}
 
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
+
+  react-dom@16.13.1:
+    resolution: {integrity: sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==}
+    peerDependencies:
+      react: ^16.13.1
+
+  react-is@16.13.1:
+    resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react@16.13.1:
+    resolution: {integrity: sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==}
+    engines: {node: '>=0.10.0'}
 
   regex-recursion@6.0.2:
     resolution: {integrity: sha512-0YCaSCq2VRIebiaUviZNs0cBz1kg5kVS2UKUfNIx8YVs1cN3AV7NTctO5FOKBA+UT2BPJIWZauYHPqJODG50cg==}
@@ -1045,6 +1083,9 @@ packages:
 
   sax@1.3.0:
     resolution: {integrity: sha512-0s+oAmw9zLl1V1cS9BtZN7JAd0cW5e0QH4W3LWEK6a4LaLEA2OTpGYWDY+6XasBLtz6wkm3u1xRw95mRuJ59WA==}
+
+  scheduler@0.19.1:
+    resolution: {integrity: sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==}
 
   search-insights@2.13.0:
     resolution: {integrity: sha512-Orrsjf9trHHxFRuo9/rzm0KIWmgzE8RMlZMzuhZOJ01Rnz3D0YBAe+V6473t6/H6c7irs6Lt48brULAiRWb3Vw==}
@@ -1399,9 +1440,14 @@ snapshots:
       '@algolia/logger-common': 4.22.1
       '@algolia/requester-common': 4.22.1
 
-  '@aliyun-sls/docsearch-js@1.0.2(@algolia/client-search@5.20.3)':
+  '@aliyun-obv/app-loader-proxy@1.0.9':
     dependencies:
-      '@aliyun-sls/docsearch-react': 1.0.2(@algolia/client-search@5.20.3)
+      react: 16.13.1
+      react-dom: 16.13.1(react@16.13.1)
+
+  '@aliyun-sls/docsearch-js@1.0.2(@algolia/client-search@5.20.3)(react-dom@16.13.1(react@16.13.1))(react@16.13.1)':
+    dependencies:
+      '@aliyun-sls/docsearch-react': 1.0.2(@algolia/client-search@5.20.3)(react-dom@16.13.1(react@16.13.1))(react@16.13.1)
       preact: 10.19.5
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -1409,12 +1455,15 @@ snapshots:
       - react
       - react-dom
 
-  '@aliyun-sls/docsearch-react@1.0.2(@algolia/client-search@5.20.3)':
+  '@aliyun-sls/docsearch-react@1.0.2(@algolia/client-search@5.20.3)(react-dom@16.13.1(react@16.13.1))(react@16.13.1)':
     dependencies:
       '@algolia/autocomplete-core': 1.7.2
       '@algolia/autocomplete-preset-algolia': 1.7.2(@algolia/client-search@5.20.3)(algoliasearch@4.22.1)
       '@docsearch/css': 3.3.0
       algoliasearch: 4.22.1
+    optionalDependencies:
+      react: 16.13.1
+      react-dom: 16.13.1(react@16.13.1)
     transitivePeerDependencies:
       - '@algolia/client-search'
 
@@ -1453,9 +1502,9 @@ snapshots:
 
   '@docsearch/css@3.8.2': {}
 
-  '@docsearch/js@3.8.2(@algolia/client-search@5.20.3)(search-insights@2.13.0)':
+  '@docsearch/js@3.8.2(@algolia/client-search@5.20.3)(react-dom@16.13.1(react@16.13.1))(react@16.13.1)(search-insights@2.13.0)':
     dependencies:
-      '@docsearch/react': 3.8.2(@algolia/client-search@5.20.3)(search-insights@2.13.0)
+      '@docsearch/react': 3.8.2(@algolia/client-search@5.20.3)(react-dom@16.13.1(react@16.13.1))(react@16.13.1)(search-insights@2.13.0)
       preact: 10.19.5
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -1464,13 +1513,15 @@ snapshots:
       - react-dom
       - search-insights
 
-  '@docsearch/react@3.8.2(@algolia/client-search@5.20.3)(search-insights@2.13.0)':
+  '@docsearch/react@3.8.2(@algolia/client-search@5.20.3)(react-dom@16.13.1(react@16.13.1))(react@16.13.1)(search-insights@2.13.0)':
     dependencies:
       '@algolia/autocomplete-core': 1.17.7(@algolia/client-search@5.20.3)(algoliasearch@5.20.3)(search-insights@2.13.0)
       '@algolia/autocomplete-preset-algolia': 1.17.7(@algolia/client-search@5.20.3)(algoliasearch@5.20.3)
       '@docsearch/css': 3.8.2
       algoliasearch: 5.20.3
     optionalDependencies:
+      react: 16.13.1
+      react-dom: 16.13.1(react@16.13.1)
       search-insights: 2.13.0
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -2075,6 +2126,12 @@ snapshots:
 
   js-cookie@3.0.5: {}
 
+  js-tokens@4.0.0: {}
+
+  loose-envify@1.4.0:
+    dependencies:
+      js-tokens: 4.0.0
+
   magic-string@0.30.17:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
@@ -2139,6 +2196,8 @@ snapshots:
 
   normalize.css@8.0.1: {}
 
+  object-assign@4.1.1: {}
+
   once@1.4.0:
     dependencies:
       wrappy: 1.0.2
@@ -2175,9 +2234,31 @@ snapshots:
 
   prettier@2.8.8: {}
 
+  prop-types@15.8.1:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.13.1
+
   property-information@6.5.0: {}
 
   queue-microtask@1.2.3: {}
+
+  react-dom@16.13.1(react@16.13.1):
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      prop-types: 15.8.1
+      react: 16.13.1
+      scheduler: 0.19.1
+
+  react-is@16.13.1: {}
+
+  react@16.13.1:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      prop-types: 15.8.1
 
   regex-recursion@6.0.2:
     dependencies:
@@ -2223,6 +2304,11 @@ snapshots:
       queue-microtask: 1.2.3
 
   sax@1.3.0: {}
+
+  scheduler@0.19.1:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
 
   search-insights@2.13.0: {}
 
@@ -2326,10 +2412,10 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  vitepress@1.6.3(@algolia/client-search@5.20.3)(postcss@8.5.2)(search-insights@2.13.0)(typescript@4.9.5):
+  vitepress@1.6.3(@algolia/client-search@5.20.3)(postcss@8.5.2)(react-dom@16.13.1(react@16.13.1))(react@16.13.1)(search-insights@2.13.0)(typescript@4.9.5):
     dependencies:
       '@docsearch/css': 3.8.2
-      '@docsearch/js': 3.8.2(@algolia/client-search@5.20.3)(search-insights@2.13.0)
+      '@docsearch/js': 3.8.2(@algolia/client-search@5.20.3)(react-dom@16.13.1(react@16.13.1))(react@16.13.1)(search-insights@2.13.0)
       '@iconify-json/simple-icons': 1.2.25
       '@shikijs/core': 2.5.0
       '@shikijs/transformers': 2.5.0

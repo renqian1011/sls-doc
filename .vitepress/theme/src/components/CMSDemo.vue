@@ -7,6 +7,7 @@ import { inBrowser, useData } from 'vitepress'
 const props = defineProps(['workspace', 'region'])
 const workspace = props.workspace ?? 'default-cms-1819385687343877-cn-hongkong'
 const region = props.region ?? 'cn-hongkong'
+const assistantId = 'starops-demo'
 
 const { lang } = useData()
 watchEffect(() => {
@@ -21,7 +22,7 @@ const params = computed(() => {
 
   if (queries == null || queries.dest == null) {
     return {
-      dest: `/next/region/${region}/workspace/${workspace}/app/entity/explorer`,
+      dest: `/next/region/${region}/workspace/${workspace}/app/entity/explorer?fixedAssistantId=${assistantId}&assistantId=${assistantId}&staropsClusterRegion=cn-beijing`,
       theme: 'default',
       maxWidth: false,
     }

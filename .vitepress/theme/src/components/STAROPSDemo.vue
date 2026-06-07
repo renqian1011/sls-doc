@@ -22,7 +22,7 @@ const params = computed(() => {
 
   if (queries == null || queries.dest == null) {
     return {
-      dest: `/?assistantId=${assistantId}&initWorkspace=${workspace}&hideWorkspaceSwitch=true&showStarOpsReplayProgress=true`,
+      dest: `/?assistantId=${assistantId}&fixedAssistantId=${assistantId}&initWorkspace=${workspace}&hideWorkspaceSwitch=true&showStarOpsReplayProgress=true&staropsClusterRegion=cn-beijing`,
       theme: 'default',
       maxWidth: false,
     }

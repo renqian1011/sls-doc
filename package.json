@@ -26,6 +26,7 @@
     "serve": "vitepress serve ."
   },
   "dependencies": {
+    "@aliyun-obv/app-loader-proxy": "^1.0.9",
     "@aliyun-sls/docsearch-js": "1.0.2",
     "@aliyun-sls/rum-core": "^0.0.11",
     "@docsearch/css": "^3.2.1",
@@ -35,6 +36,8 @@
     "glob": "^8.0.3",
     "js-cookie": "^3.0.5",
     "normalize.css": "^8.0.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "sitemap": "^7.1.1",
     "urijs": "^1.19.11"
   },
