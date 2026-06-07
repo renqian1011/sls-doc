@@ -2,8 +2,86 @@
 import { inBrowser, withBase } from 'vitepress'
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
-const DEFAULT_MANIFEST = 'https://g.alicdn.com/observability/obviz-app-copilot/0.0.112/assets.json'
+const COPILOT_APP_ID = 'obviz-app-copilot'
+const DEFAULT_APP_REPO_NAME = 'observability/obviz-app-copilot'
+const DEFAULT_APP_VERSION = '0.0.112'
 const DEFAULT_TOKEN_URL = 'https://cms-demo-ticket-duulhxdgtb.cn-shanghai.fcapp.run/token'
+
+type AppLoaderConfig = {
+  app_repo_name: string
+  version: string
+}
+
+const DEFAULT_APP_CONFIG: Record<string, AppLoaderConfig> = {
+  'observability-template-manager': {
+    app_repo_name: 'sls/observability-template-manager',
+    version: '0.1.121',
+  },
+  'obviz-core': {
+    app_repo_name: 'observability/obviz-core',
+    version: '0.5.32',
+  },
+  'obviz-profiling-explorer': {
+    app_repo_name: 'observability/obviz-profiling-explorer',
+    version: '0.0.4',
+  },
+  'obviz-engine': {
+    app_repo_name: 'observability/obviz-engine',
+    version: '1.12.45',
+  },
+  'obviz-trace-explorer': {
+    app_repo_name: 'observability/obviz-trace-explorer',
+    version: '0.0.117',
+  },
+  [COPILOT_APP_ID]: {
+    app_repo_name: DEFAULT_APP_REPO_NAME,
+    version: DEFAULT_APP_VERSION,
+  },
+  'obviz-llm-explorer': {
+    app_repo_name: 'observability/obviz-llm-explorer',
+    version: '0.0.15',
+  },
+  'obviz-explorer': {
+    app_repo_name: 'observability/obviz-explorer',
+    version: '0.0.176',
+  },
+  'obviz-app-dashboard': {
+    app_repo_name: 'observability/obviz-app-dashboard',
+    version: '1.1.8',
+  },
+  'obviz-entity-explorer': {
+    app_repo_name: 'observability/obviz-entity-explorer',
+    version: '0.0.175',
+  },
+  'obviz-charts': {
+    app_repo_name: 'observability/obviz-charts',
+    version: '0.0.33',
+  },
+  'obviz-system-management': {
+    app_repo_name: 'observability/obviz-system-management',
+    version: '0.0.4',
+  },
+  'sls-lsp': {
+    app_repo_name: 'sls/sls-lsp',
+    version: '0.2.65',
+  },
+  'alert': {
+    app_repo_name: 'observability/alert',
+    version: '1.0.74',
+  },
+  'umodel-explorer': {
+    app_repo_name: 'observability/umodel-explorer',
+    version: '0.1.32',
+  },
+  'common-model-spec': {
+    app_repo_name: 'observability/common-model-spec',
+    version: '0.1.360',
+  },
+  'obviz-apm-configs': {
+    app_repo_name: 'observability/obviz-apm-configs',
+    version: '0.0.4',
+  },
+}
 
 type ReplayChatResult = {
   success: boolean
@@ -19,6 +97,8 @@ const props = withDefaults(
     src?: string
     data?: ReplayChatResult | { getThreadDataResult?: ReplayChatResult }
     manifest?: string
+    appRepoName?: string
+    appVersion?: string
     entry?: string
     exportName?: string
     tokenUrl?: string
@@ -89,7 +169,39 @@ function resolveReplayDataUrl(src: string): string {
 }
 
 function resolveManifest(): string | undefined {
-  return props.manifest || (import.meta.env.DEV ? DEFAULT_MANIFEST : undefined)
+  if (props.manifest) return props.manifest
+  if (!import.meta.env.DEV) return undefined
+  return `https://g.alicdn.com/${props.appRepoName || DEFAULT_APP_REPO_NAME}/${
+    props.appVersion || DEFAULT_APP_VERSION
+  }/assets.json`
+}
+
+function ensureAppConfig() {
+  if (!inBrowser || resolveManifest()) return
+
+  const appConfig = {
+    ...DEFAULT_APP_CONFIG,
+    [COPILOT_APP_ID]: {
+      app_repo_name: props.appRepoName || DEFAULT_APP_REPO_NAME,
+      version: props.appVersion || DEFAULT_APP_VERSION,
+    },
+  }
+  const win = window as any
+  const obsConfig = (win.ALIYUN_OBSERVABILITY_CONSOLE_CONFIG =
+    win.ALIYUN_OBSERVABILITY_CONSOLE_CONFIG || {})
+  obsConfig.appConfig = obsConfig.appConfig || {}
+  obsConfig.appConfig = {
+    ...appConfig,
+    ...obsConfig.appConfig,
+  }
+
+  if (win.ALIYUN_SLS_CONSOLE_CONFIG) {
+    win.ALIYUN_SLS_CONSOLE_CONFIG.appConfig = win.ALIYUN_SLS_CONSOLE_CONFIG.appConfig || {}
+    win.ALIYUN_SLS_CONSOLE_CONFIG.appConfig = {
+      ...appConfig,
+      ...win.ALIYUN_SLS_CONSOLE_CONFIG.appConfig,
+    }
+  }
 }
 
 function resolveTokenValue(payload: any): string | undefined {
@@ -145,6 +257,7 @@ async function renderReplayChat() {
     if (!mounted || currentVersion !== renderVersion || !mountRef.value) return
 
     loaderProxy.setSlsAccessTokenGetter(getSlsAccessToken)
+    ensureAppConfig()
     const manifest = resolveManifest()
     const loaderOptions: {
       id: string
@@ -152,7 +265,7 @@ async function renderReplayChat() {
       manifest?: string
       deps: Record<string, never>
     } = {
-      id: 'obviz-app-copilot',
+      id: COPILOT_APP_ID,
       entry: props.entry,
       deps: {},
     }
@@ -209,6 +322,8 @@ watch(
     src: props.src,
     data: props.data,
     manifest: props.manifest,
+    appRepoName: props.appRepoName,
+    appVersion: props.appVersion,
     tokenUrl: props.tokenUrl,
     entry: props.entry,
     exportName: props.exportName,
