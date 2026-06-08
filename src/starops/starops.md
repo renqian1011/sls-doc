@@ -118,6 +118,11 @@ pageClass: sls-starops-home
       <p class="sls-starops-card__desc">钉钉应用 + AppFlow 连接流 + STAROps 数字员工三平台串联，4 步完成企业 IM 内对话式运维。</p>
       <span class="sls-starops-card__cta">查看文档</span>
     </a>
+    <a class="sls-starops-card" href="/doc/starops/practices/devops-code-to-runtime/article.html">
+      <h3 class="sls-starops-card__title">DevOps 跨域追因建模</h3>
+      <p class="sls-starops-card__desc">将代码仓库、Release、镜像接入 UModel，补全告警到代码变更的 5 层追因链路。</p>
+      <span class="sls-starops-card__cta">查看文档</span>
+    </a>
   </div>
 </section>
 
