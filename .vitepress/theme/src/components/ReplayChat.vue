@@ -5,6 +5,7 @@ import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 const COPILOT_APP_ID = 'obviz-app-copilot'
 const DEFAULT_APP_REPO_NAME = 'observability/obviz-app-copilot'
 const DEFAULT_APP_VERSION = '0.0.112'
+const PRE_STATIC_DOMAIN = 'dev.g.alicdn.com'
 const DEFAULT_TOKEN_URL = 'https://cms-demo-ticket-duulhxdgtb.cn-shanghai.fcapp.run/token'
 
 type AppLoaderConfig = {
@@ -99,6 +100,7 @@ const props = withDefaults(
     manifest?: string
     appRepoName?: string
     appVersion?: string
+    consoleEnv?: 'pre' | 'prod'
     entry?: string
     exportName?: string
     tokenUrl?: string
@@ -112,6 +114,7 @@ const props = withDefaults(
   }>(),
   {
     tokenUrl: DEFAULT_TOKEN_URL,
+    consoleEnv: 'pre',
     entry: 'copilot',
     exportName: 'ReplayChat',
     region: 'cn-hangzhou',
@@ -170,10 +173,30 @@ function resolveReplayDataUrl(src: string): string {
 
 function resolveManifest(): string | undefined {
   if (props.manifest) return props.manifest
+  if (props.consoleEnv === 'pre') return undefined
   if (!import.meta.env.DEV) return undefined
   return `https://g.alicdn.com/${props.appRepoName || DEFAULT_APP_REPO_NAME}/${
     props.appVersion || DEFAULT_APP_VERSION
   }/assets.json`
+}
+
+function ensureConsoleConfig() {
+  if (!inBrowser || props.consoleEnv !== 'pre') return
+
+  const win = window as any
+  win.ALIYUN_CONSOLE_CONFIG = {
+    ...win.ALIYUN_CONSOLE_CONFIG,
+    ENV: 'pre',
+  }
+  delete win.ALIYUN_CONSOLE_CONFIG.LOCAL
+
+  const obsConfig = (win.ALIYUN_OBSERVABILITY_CONSOLE_CONFIG =
+    win.ALIYUN_OBSERVABILITY_CONSOLE_CONFIG || {})
+  obsConfig.slsStaticDomain = PRE_STATIC_DOMAIN
+
+  if (win.ALIYUN_SLS_CONSOLE_CONFIG) {
+    win.ALIYUN_SLS_CONSOLE_CONFIG.slsStaticDomain = PRE_STATIC_DOMAIN
+  }
 }
 
 function ensureAppConfig() {
@@ -246,6 +269,8 @@ async function renderReplayChat() {
   const currentVersion = ++renderVersion
   loading.value = true
   error.value = ''
+  ensureConsoleConfig()
+  ensureAppConfig()
 
   try {
     const [result, loaderProxy] = await Promise.all([
@@ -257,7 +282,6 @@ async function renderReplayChat() {
     if (!mounted || currentVersion !== renderVersion || !mountRef.value) return
 
     loaderProxy.setSlsAccessTokenGetter(getSlsAccessToken)
-    ensureAppConfig()
     const manifest = resolveManifest()
     const loaderOptions: {
       id: string
@@ -324,6 +348,7 @@ watch(
     manifest: props.manifest,
     appRepoName: props.appRepoName,
     appVersion: props.appVersion,
+    consoleEnv: props.consoleEnv,
     tokenUrl: props.tokenUrl,
     entry: props.entry,
     exportName: props.exportName,
