@@ -19,6 +19,7 @@ function getSidebar() {
       items: [
         { text: '接入外部 MCP 工具', link: '/starops/practices/mcp-integration/article' },
         { text: '集成钉钉 IM 通道', link: '/starops/practices/dingtalk-integration/article' },
+        { text: 'DevOps 跨域追因建模', link: '/starops/practices/devops-code-to-runtime/article' },
       ],
     },
     {
