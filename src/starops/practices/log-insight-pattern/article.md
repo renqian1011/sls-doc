@@ -16,6 +16,8 @@ title: 日志模式定时巡检
   <span>分类 · 场景实践</span>
 </div>
 
+> [查看对话回放内容演示](/playground/log-insight-pattern-replay.html)
+
 本实践把核心 Logstore 的日志模式定期纳入主动巡检：场景卡建任务、数字员工对话内编排配置，cron 周期触发模式聚类与基线对比，报告归档并送达通知通道。
 
 适用范围：

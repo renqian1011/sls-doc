@@ -16,6 +16,8 @@ title: 告警 RCA 全链路分析
   <span>分类 · 场景实践</span>
 </div>
 
+> [查看对话回放内容演示](/playground/alert-rca-flow-replay.html)
+
 当您的生产环境触发告警，需要在同一个会话窗口内完成「分诊 → 数据确认 → 根因定位 → 证据采集 → 修复建议 → 复盘治理」的端到端 RCA（Root Cause Analysis），可以使用 STAROps 智能会话按 6 个 Phase 串行执行。流程依赖 ARMS / CMS / 自定义指标告警、APM trace 与日志：取数、关联、归因均由 Agent 完成，同一 thread 内逐 Phase 累积上下文，最终产出含根因假设、证据包、修复方案与复盘 Action Items 的结构化 RCA 报告。
 
 > 这是一条**被动响应**路径：从已触发的告警出发逐层下钻到根因，与"业务服务可靠性巡检"那种从业务指标主动发现风险的方向互补。

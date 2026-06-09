@@ -16,6 +16,8 @@ title: 与 STAROps 有效对话
   <span>分类 · 入门起步</span>
 </div>
 
+> [查看对话回放内容演示](/playground/effective-prompts-replay.html)
+
 在 STAROps 里，prompt 决定 Agent 取哪些数据、调用哪些 Skill、关联到哪些 UModel 实体。把实体名、时间窗和期望结论写清楚，单轮问答就能拿到可用判断；像"系统慢"这种笼统问法，Agent 只能在过宽的数据范围里反复试探，结果也难复用。
 
 下面 6 条原则覆盖了在 STAROps 里写 prompt 的常见取舍，每条配「反例 → 正例」对照。

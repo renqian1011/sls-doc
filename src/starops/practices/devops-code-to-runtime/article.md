@@ -16,6 +16,9 @@ title: DevOps 跨域追因建模
 
 <div class="sls-starops-article-meta"><span>分类 · 扩展集成</span></div>
 
+
+> [查看对话回放内容演示](/playground/devops-code-to-runtime-replay.html)
+
 UModel 已内置 apm、k8s、acs 等运行时域，覆盖服务、Pod、云资源的可观测性。但告警触发时，Agent 只能告诉你"哪个 Pod 挂了"，无法回答"是谁的哪次发布导致的"——代码仓库、Release 和容器镜像不在 UModel 建模范围内。
 
 本文介绍如何将 DevOps 数据（代码仓库、开发者、Release、镜像）接入 UModel，补全从告警到代码变更的追因链路。接入完成后，Agent 可以沿着 `告警 → 服务 → Pod → 镜像 → Release → 代码仓库 → 开发者` 的关系链自动追因。

@@ -16,6 +16,8 @@ title: 接入外部 MCP 工具
   <span>分类 · 扩展集成</span>
 </div>
 
+> [查看对话回放内容演示](/playground/mcp-integration-replay.html)
+
 当您需要让数字员工调用外部能力（例如搜索阿里云官网、查询内部 CMDB、读取 GitLab commit、拉取 Jenkins build 状态、读写工单系统等），并希望接入一次、所有数字员工都能复用时，您可以通过控制台「添加自定义 MCP」入口把外部 MCP Server 接进来。本文以阿里云百炼 web_search MCP 为范例（SSE 协议 + 直连模式 + Bearer Token 认证），其他传输协议、网络模式与认证方式按相同表单结构自行选择。
 
 ## 前提条件
