@@ -14,6 +14,7 @@ import ReplayChat from '@theme/src/components/ReplayChat.vue'
   workspace="qs-devops-demo"
   region="cn-hongkong"
   default-region="cn-hongkong"
+  console-env="prod"
   employee="starops-best-practice"
   height="720px"
 />
