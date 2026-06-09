@@ -44,6 +44,8 @@ const getEnNavs = require('./nav').getEnNavs
 
 const glob = require('glob')
 
+const localConsoleProxyTarget = process.env.SLS_DOC_CONSOLE_PROXY_TARGET || 'http://localhost:4099'
+
 const sqlfunFiles = glob
   .sync('./src/sqlfun/*.md')
   .map((f) => path.parse(f).name)
@@ -63,6 +65,37 @@ module.exports = (async () => {
     vite: {
       build: {
         minify: false,
+      },
+      server: {
+        host: '0.0.0.0',
+        allowedHosts: ['pre-cmsnext', 'pre-cmsnext-inc', 'cmsnext', 'cmsnext-inc'],
+        // @ts-ignore keep local console-style fetches working across localhost/pre-cmsnext hosts.
+        cors: (req, callback) => {
+          let origin = req.origin
+          if ((origin == null || origin === '') && Array.isArray(req.rawHeaders)) {
+            const originIndex = req.rawHeaders.findIndex(
+              (header) => typeof header === 'string' && header.toLowerCase() === 'origin'
+            )
+            if (originIndex !== -1 && req.rawHeaders[originIndex + 1]) {
+              origin = req.rawHeaders[originIndex + 1]
+            }
+          }
+          callback(null, { origin, credentials: true })
+        },
+        proxy: {
+          '^/(console|common)/.*\\.json(\\?(?!import)[^/]*)?$': {
+            target: localConsoleProxyTarget,
+            configure: (proxy) => {
+              proxy.on('proxyReq', (proxyReq, req) => {
+                try {
+                  proxyReq.setHeader('host', req.headers.host)
+                } catch (e) {
+                  // ignore
+                }
+              })
+            },
+          },
+        },
       },
       resolve: {
         alias: {

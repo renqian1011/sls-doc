@@ -10,11 +10,9 @@ import ReplayChat from '@theme/src/components/ReplayChat.vue'
 
 <ReplayChat
   src="https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/business-reliability-flow/docs/replay.json"
-  project="default-cms-0000000000000000-cn-hongkong"
-  workspace="default-cms-0000000000000000-cn-hongkong"
+  project="default-cms-1819385687343877-cn-hongkong"
+  workspace="default-cms-1819385687343877-cn-hongkong"
   region="cn-hongkong"
   default-region="cn-hongkong"
-  console-env="prod"
   employee="starops-best-practice"
-  height="720px"
 />

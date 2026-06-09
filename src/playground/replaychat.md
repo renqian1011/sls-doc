@@ -10,10 +10,9 @@ import ReplayChat from '@theme/src/components/ReplayChat.vue'
 
 <ReplayChat
   src="/replay/replay-chat-demo.json"
-  project="replay-demo-project"
-  workspace="replay-demo-workspace"
-  region="cn-hangzhou"
-  default-region="cn-hangzhou"
+  project="default-cms-1819385687343877-cn-hongkong"
+  workspace="default-cms-1819385687343877-cn-hongkong"
+  region="cn-hongkong"
+  default-region="cn-hongkong"
   employee="starops-demo"
-  height="720px"
 />
