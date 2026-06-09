@@ -16,6 +16,8 @@ title: 编写 Skill 确定性脚本
   <span>分类 · 平台沉淀</span>
 </div>
 
+> [查看对话回放内容演示](/playground/skill-script-deterministic-replay.html)
+
 本规范定义 STAROps Skill 中数值计算的确定性脚本写法，保证同输入同输出。
 
 模型推理在两类计算上不可靠：

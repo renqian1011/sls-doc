@@ -16,6 +16,8 @@ title: 编写 STAROps 运维 Skill
   <span>分类 · 平台沉淀</span>
 </div>
 
+> [查看对话回放内容演示](/playground/skill-authoring-replay.html)
+
 本规范定义 STAROps 运维 Skill 的 7 要素，用于将 RDS 巡检、告警根因定位、日志模式分析等重复运维操作沉淀为可加载技能。
 
 适用范围：

@@ -16,6 +16,9 @@ title: 集成钉钉 IM 通道
 
 <div class="sls-starops-article-meta"><span>分类 · 扩展集成</span></div>
 
+
+> [查看对话回放内容演示](/playground/dingtalk-integration-replay.html)
+
 当您希望在钉钉中直接与 STAROps 数字员工对话——例如在单聊中查询可观测数据、在群内 @机器人发起告警诊断时，您可以按照本文完成钉钉应用创建、AppFlow 连接流配置和机器人发布。
 
 ## 安装 Skill
