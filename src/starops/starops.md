@@ -98,6 +98,11 @@ pageClass: sls-starops-home
       <p class="sls-starops-card__desc">告警触发后 6 Phase 串接分诊、确认、根因、证据、修复、复盘，把 RCA 从「定位」做到「闭环」。</p>
       <span class="sls-starops-card__cta">查看文档</span>
     </a>
+    <a class="sls-starops-card" href="/doc/starops/practices/capacity-risk-prediction/article.html">
+      <h3 class="sls-starops-card__title">饱和度评估与风险预测</h3>
+      <p class="sls-starops-card__desc">PromQL 趋势函数跨 ECS/RDS/Redis/K8s/APM 三域 12 项巡检，4 种评估策略输出结构化容量风险报告。</p>
+      <span class="sls-starops-card__cta">查看文档</span>
+    </a>
   </div>
 </section>
 
