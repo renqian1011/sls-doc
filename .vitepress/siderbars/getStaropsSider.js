@@ -12,6 +12,7 @@ function getSidebar() {
         { text: '日志模式定时巡检', link: '/starops/practices/log-insight-pattern/article' },
         { text: '业务服务可靠性巡检', link: '/starops/practices/business-reliability-flow/article' },
         { text: '告警 RCA 全链路分析', link: '/starops/practices/alert-rca-flow/article' },
+        { text: '饱和度评估与风险预测', link: '/starops/practices/capacity-risk-prediction/article' },
       ],
     },
     {
