@@ -7,7 +7,7 @@ function getSidebar() {
     {
       text: '场景实践',
       items: [
-        { text: 'UModel 指标语义与实体拓扑', link: '/starops/practices/umodel-metric-entity/article' },
+        { text: 'UModel 使用指南', link: '/starops/practices/umodel-metric-entity/article' },
         { text: 'RDS 周期性自动巡检', link: '/starops/practices/rds-inspection-via-script/article' },
         { text: '日志模式定时巡检', link: '/starops/practices/log-insight-pattern/article' },
         { text: '业务服务可靠性巡检', link: '/starops/practices/business-reliability-flow/article' },
