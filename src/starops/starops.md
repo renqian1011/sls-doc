@@ -74,8 +74,8 @@ pageClass: sls-starops-home
   </div>
   <div class="sls-starops-grid sls-starops-grid--three">
     <a class="sls-starops-card" href="/doc/starops/practices/umodel-metric-entity/article.html">
-      <h3 class="sls-starops-card__title">UModel 指标语义与实体拓扑</h3>
-      <p class="sls-starops-card__desc">提问指标前先校准 5 类元数据：单位、聚合口径、实体维度、拓扑链、UModel 缺失字段，避免结论不可落地。</p>
+      <h3 class="sls-starops-card__title">UModel 使用指南</h3>
+      <p class="sls-starops-card__desc">基于 UModel 语义层让 Agent 走显式语义而非靠猜，8 组正反例覆盖指标、拓扑、日志、链路、事件。</p>
       <span class="sls-starops-card__cta">查看文档</span>
     </a>
     <a class="sls-starops-card" href="/doc/starops/practices/rds-inspection-via-script/article.html">
