@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 饱和度评估与风险预测 — Skill 创建与验证
+title: 饱和度评估与风险预测 — Skill 构建与验证
 footer: false
 ---
 
