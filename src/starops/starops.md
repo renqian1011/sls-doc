@@ -100,7 +100,7 @@ pageClass: sls-starops-home
     </a>
     <a class="sls-starops-card" href="/doc/starops/practices/capacity-risk-prediction/article.html">
       <h3 class="sls-starops-card__title">饱和度评估与风险预测</h3>
-      <p class="sls-starops-card__desc">跨域执行容量预测并生成风险报告，覆盖趋势预测、基线偏离、缓慢增长、阈值突破 4 种评估策略。</p>
+      <p class="sls-starops-card__desc">跨域执行容量预测并生成风险报告，覆盖趋势预测、基线偏离、缓慢增长、阈值突破、短期波动、等 7 种评估策略。</p>
       <span class="sls-starops-card__cta">查看文档</span>
     </a>
   </div>
