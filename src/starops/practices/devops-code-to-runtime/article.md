@@ -1,7 +1,7 @@
 ---
 pageClass: sls-starops-article
 status: published
-journey: 扩展集成
+journey: 协作闭环
 id: devops-code-to-runtime
 title: DevOps 跨域追因建模
 ---
@@ -9,12 +9,12 @@ title: DevOps 跨域追因建模
 <div class="sls-starops-article-crumb">
   <a href="/doc/starops/starops.html">STAROps</a>
   <span class="sep">/</span>
-  <span>扩展集成</span>
+  <span>协作闭环</span>
 </div>
 
 # DevOps 跨域追因建模
 
-<div class="sls-starops-article-meta"><span>分类 · 扩展集成</span></div>
+<div class="sls-starops-article-meta"><span>分类 · 协作闭环</span></div>
 
 
 > [查看对话回放内容演示](/playground/devops-code-to-runtime-replay.html)

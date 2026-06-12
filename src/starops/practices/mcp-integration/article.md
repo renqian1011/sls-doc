@@ -1,19 +1,19 @@
 ---
 pageClass: sls-starops-article
 status: published
-journey: 扩展集成
+journey: 经验固化
 id: mcp-integration
 title: 接入外部 MCP 工具
 ---
 
 <div class="sls-starops-article-crumb">
-  <a href="/doc/starops/starops.html">STAROps</a> <span class="sep">/</span> <span>扩展集成</span>
+  <a href="/doc/starops/starops.html">STAROps</a> <span class="sep">/</span> <span>经验固化</span>
 </div>
 
 # 接入外部 MCP 工具
 
 <div class="sls-starops-article-meta">
-  <span>分类 · 扩展集成</span>
+  <span>分类 · 经验固化</span>
 </div>
 
 > [查看对话回放内容演示](/playground/mcp-integration-replay.html)

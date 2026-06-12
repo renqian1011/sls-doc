@@ -1,19 +1,19 @@
 ---
 pageClass: sls-starops-article
 status: published
-journey: 场景实践
+journey: 语义上手
 id: umodel-metric-entity
 title: UModel 使用指南
 ---
 
 <div class="sls-starops-article-crumb">
-  <a href="/doc/starops/starops.html">STAROps</a> <span class="sep">/</span> <span>场景实践</span>
+  <a href="/doc/starops/starops.html">STAROps</a> <span class="sep">/</span> <span>语义上手</span>
 </div>
 
 # UModel 使用指南
 
 <div class="sls-starops-article-meta">
-  <span>分类 · 场景实践</span>
+  <span>分类 · 语义上手</span>
 </div>
 
 > [查看对话回放内容演示](/playground/umodel-metric-entity-replay.html)

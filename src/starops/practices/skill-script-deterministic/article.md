@@ -1,19 +1,19 @@
 ---
 pageClass: sls-starops-article
 status: published
-journey: 平台沉淀
+journey: 经验固化
 id: skill-script-deterministic
 title: 编写 Skill 确定性脚本
 ---
 
 <div class="sls-starops-article-crumb">
-  <a href="/doc/starops/starops.html">STAROps</a> <span class="sep">/</span> <span>平台沉淀</span>
+  <a href="/doc/starops/starops.html">STAROps</a> <span class="sep">/</span> <span>经验固化</span>
 </div>
 
 # 编写 Skill 确定性脚本
 
 <div class="sls-starops-article-meta">
-  <span>分类 · 平台沉淀</span>
+  <span>分类 · 经验固化</span>
 </div>
 
 > [查看对话回放内容演示](/playground/skill-script-deterministic-replay.html)

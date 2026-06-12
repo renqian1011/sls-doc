@@ -1,19 +1,19 @@
 ---
 pageClass: sls-starops-article
 status: published
-journey: 场景实践
+journey: 主动巡检
 id: capacity-risk-prediction
 title: 饱和度评估与风险预测
 ---
 
 <div class="sls-starops-article-crumb">
-  <a href="/doc/starops/starops.html">STAROps</a> <span class="sep">/</span> <span>场景实践</span>
+  <a href="/doc/starops/starops.html">STAROps</a> <span class="sep">/</span> <span>主动巡检</span>
 </div>
 
 # 饱和度评估与风险预测
 
 <div class="sls-starops-article-meta">
-  <span>分类 · 场景实践</span>
+  <span>分类 · 主动巡检</span>
 </div>
 
 > 对话回放：[Phase 1：算子能力认知](/playground/capacity-risk-prediction-operator-replay.html) ｜ [Phase 2：Skill 构建与验证](/playground/capacity-risk-prediction-replay.html) ｜ [Phase 3：长期任务运营](/playground/capacity-risk-prediction-mission-replay.html)
