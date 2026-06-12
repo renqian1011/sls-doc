@@ -1,19 +1,19 @@
 ---
 pageClass: sls-starops-article
 status: published
-journey: 入门起步
+journey: 语义上手
 id: effective-prompts
 title: 与 STAROps 有效对话
 ---
 
 <div class="sls-starops-article-crumb">
-  <a href="/doc/starops/starops.html">STAROps</a> <span class="sep">/</span> <span>入门起步</span>
+  <a href="/doc/starops/starops.html">STAROps</a> <span class="sep">/</span> <span>语义上手</span>
 </div>
 
 # 与 STAROps 有效对话
 
 <div class="sls-starops-article-meta">
-  <span>分类 · 入门起步</span>
+  <span>分类 · 语义上手</span>
 </div>
 
 > [查看对话回放内容演示](/playground/effective-prompts-replay.html)

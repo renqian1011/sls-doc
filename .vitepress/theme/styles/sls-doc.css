@@ -3743,3 +3743,51 @@
     display: block;
   }
 }
+
+/* STAROps journey nav: five groups need a single desktop row. */
+.sls-starops-home .sls-starops-scene-nav {
+  max-width: 1200px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.sls-starops-home .sls-starops-scene-card {
+  min-height: 176px;
+  gap: 10px;
+  padding: 18px 18px 20px;
+}
+
+.sls-starops-home .sls-starops-scene-card h2 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+.sls-starops-home .sls-starops-scene-card p {
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1180px) {
+  .sls-starops-home .sls-starops-scene-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .sls-starops-home .sls-starops-scene-nav {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sls-starops-home .sls-starops-scene-card h2 {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.sls-starops-home .sls-starops-scene-card p {
+  flex: 0 0 auto;
+}
+
+.sls-starops-home .sls-starops-scene-card__cta {
+  margin-top: auto;
+}

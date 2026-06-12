@@ -7,6 +7,7 @@ const { frontmatter } = useData()
 const pageClass = computed(() => frontmatter.value.pageClass || '')
 const isStaropsHome = computed(() => pageClass.value === 'sls-starops-home')
 const isStaropsArticle = computed(() => pageClass.value === 'sls-starops-article')
+const staropsJourney = computed(() => frontmatter.value.journey || 'STAROps 实践')
 </script>
 
 <template>
@@ -40,7 +41,7 @@ const isStaropsArticle = computed(() => pageClass.value === 'sls-starops-article
         <span class="sep">/</span>
         <a href="/doc/starops/starops.html">STAROps</a>
         <span class="sep">/</span>
-        <span>场景实践</span>
+        <span>{{ staropsJourney }}</span>
       </div>
       <a class="sls-starops-topbar__cta" href="/doc/starops/starops.html">← 返回 STAROps 子站点</a>
     </div>

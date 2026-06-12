@@ -1,19 +1,19 @@
 ---
 pageClass: sls-starops-article
 status: published
-journey: 场景实践
+journey: 主动巡检
 id: business-reliability-flow
 title: 业务服务可靠性巡检
 ---
 
 <div class="sls-starops-article-crumb">
-  <a href="/doc/starops/starops.html">STAROps</a> <span class="sep">/</span> <span>场景实践</span>
+  <a href="/doc/starops/starops.html">STAROps</a> <span class="sep">/</span> <span>主动巡检</span>
 </div>
 
 # 业务服务可靠性巡检
 
 <div class="sls-starops-article-meta">
-  <span>分类 · 场景实践</span>
+  <span>分类 · 主动巡检</span>
 </div>
 
 > [查看对话回放内容演示](/playground/business-reliability-flow-replay.html)
