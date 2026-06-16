@@ -28,13 +28,23 @@ pageClass: sls-observe-home
       <a class="sls-home-playground__action no-icon" href="/doc/playground/staropsdemo.html" target="_blank">启动演示</a>
     </div>
   </div>
+  <div class="sls-home-playground sls-home-playground--parent">
+    <span class="sls-home-playground__kicker">AgentLoop</span>
+    <strong>AgentLoop 智能体进化平台</strong>
+    <span class="sls-home-playground__summary">Agent应用提供 Agent-as-a-Judge、Agent Playground、Trace2Dataset等 Agent应用范式的场景化闭环能力，让 Agent在生产环境中形成可观测、可评估、可优化的持续进化飞轮。</span>
+    <div class="sls-home-playground__actions">
+      <a class="sls-home-playground__action no-icon" href="/doc/playground/agentloopdemo.html" target="_blank">启动演示</a>
+    </div>
+  </div>
   <svg class="sls-home-launchpad__connector" aria-hidden="true" viewBox="0 0 1200 40" preserveAspectRatio="none">
-    <line x1="600" y1="0" x2="600" y2="20"></line>
+    <line x1="400" y1="0" x2="400" y2="20"></line>
+    <line x1="800" y1="0" x2="800" y2="20"></line>
     <line x1="200" y1="20" x2="1000" y2="20"></line>
     <line x1="200" y1="20" x2="200" y2="40"></line>
     <line x1="600" y1="20" x2="600" y2="40"></line>
     <line x1="1000" y1="20" x2="1000" y2="40"></line>
-    <circle class="dot-top" cx="600" cy="0" r="2.5"></circle>
+    <circle class="dot-top" cx="400" cy="0" r="2.5"></circle>
+    <circle class="dot-top" cx="800" cy="0" r="2.5"></circle>
     <circle class="dot-end" cx="200" cy="40" r="3.5"></circle>
     <circle class="dot-end" cx="600" cy="40" r="3.5"></circle>
     <circle class="dot-end" cx="1000" cy="40" r="3.5"></circle>

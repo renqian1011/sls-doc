@@ -29,6 +29,9 @@ export function initLang(lang: string) {
 const TRUSTED_ORIGINS = [
   'https://sls.console.aliyun.com',
   'https://cmsnext.console.aliyun.com',
+  'https://agentloop.console.aliyun.com',
+  'https://agentloop4service.console.aliyun.com',
+  'https://pre-agentloop4service.console.aliyun.com',
   'https://sls.console.alibabacloud.com',
   'https://arms.console.alibabacloud.com',
 ]

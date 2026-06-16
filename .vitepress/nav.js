@@ -87,6 +87,14 @@ function getCnNavs() {
               text: 'ARMS Playground',
               link: 'https://sls.aliyun.com/doc/playground/armsdemo.html',
             },
+            {
+              text: 'STAROps Playground',
+              link: 'https://sls.aliyun.com/doc/playground/staropsdemo.html',
+            },
+            {
+              text: 'AgentLoop Playground',
+              link: 'https://sls.aliyun.com/doc/playground/agentloopdemo.html',
+            },
           ],
         },
         {
@@ -103,6 +111,14 @@ function getCnNavs() {
             {
               text: '云监控',
               link: 'https://cloudmonitornext.console.aliyun.com/',
+            },
+            {
+              text: 'STAROps',
+              link: 'https://starops.console.aliyun.com/',
+            },
+            {
+              text: 'AgentLoop',
+              link: 'https://agentloop.console.aliyun.com/',
             },
           ],
         },
@@ -197,6 +213,14 @@ function getEnNavs() {
               text: 'ARMS Playground',
               link: 'https://sls.aliyun.com/doc/en/playground/armsdemo.html',
             },
+            {
+              text: 'STAROps Playground',
+              link: 'https://sls.aliyun.com/doc/en/playground/staropsdemo.html',
+            },
+            {
+              text: 'AgentLoop Playground',
+              link: 'https://sls.aliyun.com/doc/en/playground/agentloopdemo.html',
+            },
           ],
         },
         {
@@ -213,6 +237,14 @@ function getEnNavs() {
             {
               text: 'CloudMonitor',
               link: 'https://cloudmonitornext.console.aliyun.com/',
+            },
+            {
+              text: 'STAROps',
+              link: 'https://starops.console.aliyun.com/',
+            },
+            {
+              text: 'AgentLoop',
+              link: 'https://agentloop.console.aliyun.com/',
             },
           ],
         },

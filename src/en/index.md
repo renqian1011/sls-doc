@@ -1,13 +1,73 @@
-# Simple Log Service
+---
+pageClass: sls-observe-home
+---
 
-Simple Log Service is a cloud-native observability and analytics platform that provides large-scale, low-cost, and real-time services to process multiple types of data such as logs, metrics, and traces. Simple Log Service allows you to collect, transform, query, analyze, visualize, ship, and consume data. You can also configure alert rules in the console. Simple Log Service helps you improve digital capabilities in R&D, O&M, IT operations, and data security.
+<section class="sls-home-hero">
+  <div class="sls-home-hero__stars" aria-hidden="true"></div>
+  <div class="sls-home-hero__mesh" aria-hidden="true"></div>
+  <div class="sls-home-hero__content">
+    <p class="sls-home-eyebrow">Observability Demo Center</p>
+    <h1>Alibaba Cloud Observability</h1>
+    <p class="sls-home-lede">Explore cloud-native observability demos across logs, metrics, traces, alerts, and intelligent operations. These demos help teams understand real-time analytics, monitoring, and Agentic Ops workflows in production-like environments.</p>
+    <div class="sls-home-signals" aria-label="Observability data types">
+      <span>Logs</span>
+      <span>Metrics</span>
+      <span>Traces</span>
+      <span>Alerts</span>
+    </div>
+  </div>
+</section>
 
-:::tip SLS Playground Released!
-SLS Playground provides a read-only account that you can use to access the Simple Log Service console. You can use most features of Simple Log Service in demo mode. SLS Playground provides demos for various modules, including intelligent O&M applications, CloudLens applications, analysis on multiple types of logs, and visualization.
-
-[Try](/en/playground/demo.html){target="_blank"}
-
-:::
+<section class="sls-home-launchpad" aria-label="Playground">
+  <div class="sls-home-playground sls-home-playground--parent">
+    <span class="sls-home-playground__kicker">STAROps</span>
+    <strong>Agentic Ops Best Practices</strong>
+    <span class="sls-home-playground__summary">STAROps examples for Agentic Ops scenarios, from guided conversations and async tasks to inspections and business reliability workflows.</span>
+    <div class="sls-home-playground__actions">
+      <a class="sls-home-playground__action" href="/doc/starops/starops.html">Best Practices</a>
+      <a class="sls-home-playground__action no-icon" href="/doc/en/playground/staropsdemo.html" target="_blank">Launch Demo</a>
+    </div>
+  </div>
+  <div class="sls-home-playground sls-home-playground--parent">
+    <span class="sls-home-playground__kicker">AgentLoop</span>
+    <strong>AgentLoop Evolution Platform</strong>
+    <span class="sls-home-playground__summary">AgentLoop provides scenario-based closed-loop capabilities for Agent-as-a-Judge, Agent Playground, and Trace2Dataset, helping agents become observable, evaluable, and optimizable in production.</span>
+    <div class="sls-home-playground__actions">
+      <a class="sls-home-playground__action no-icon" href="/doc/en/playground/agentloopdemo.html" target="_blank">Launch Demo</a>
+    </div>
+  </div>
+  <svg class="sls-home-launchpad__connector" aria-hidden="true" viewBox="0 0 1200 40" preserveAspectRatio="none">
+    <line x1="400" y1="0" x2="400" y2="20"></line>
+    <line x1="800" y1="0" x2="800" y2="20"></line>
+    <line x1="200" y1="20" x2="1000" y2="20"></line>
+    <line x1="200" y1="20" x2="200" y2="40"></line>
+    <line x1="600" y1="20" x2="600" y2="40"></line>
+    <line x1="1000" y1="20" x2="1000" y2="40"></line>
+    <circle class="dot-top" cx="400" cy="0" r="2.5"></circle>
+    <circle class="dot-top" cx="800" cy="0" r="2.5"></circle>
+    <circle class="dot-end" cx="200" cy="40" r="3.5"></circle>
+    <circle class="dot-end" cx="600" cy="40" r="3.5"></circle>
+    <circle class="dot-end" cx="1000" cy="40" r="3.5"></circle>
+  </svg>
+  <a class="sls-home-playground" href="/doc/en/playground/cmsdemo.html" target="_blank">
+    <span class="sls-home-playground__kicker">CMS 2.0</span>
+    <strong>CloudMonitor 2.0 Playground</strong>
+    <span class="sls-home-playground__summary">A unified observability platform that brings together SLS, CMS, ARMS, metrics, traces, logs, and events.</span>
+    <span class="sls-home-playground__action">Launch Demo</span>
+  </a>
+  <a class="sls-home-playground" href="/doc/en/playground/demo.html" target="_blank">
+    <span class="sls-home-playground__kicker">SLS</span>
+    <strong>SLS Playground</strong>
+    <span class="sls-home-playground__summary">A read-only console demo covering CloudLens, log analytics, visualization, and intelligent O&M applications.</span>
+    <span class="sls-home-playground__action">Launch Demo</span>
+  </a>
+  <a class="sls-home-playground" href="/doc/en/playground/armsdemo.html" target="_blank">
+    <span class="sls-home-playground__kicker">ARMS</span>
+    <strong>ARMS Playground</strong>
+    <span class="sls-home-playground__summary">Entry points for application monitoring, trace analysis, performance profiling, and user experience monitoring.</span>
+    <span class="sls-home-playground__action">Launch Demo</span>
+  </a>
+</section>
 
 ## Introduction to Demo Center
 
