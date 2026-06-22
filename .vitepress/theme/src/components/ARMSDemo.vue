@@ -59,6 +59,7 @@ watchEffect(async () => {
 
 <template>
   <div class="container">
+    <div class="tip" v-if="tip">{{ tip }}</div>
     <iframe
       v-if="dest !== ''"
       :src="dest"
@@ -66,7 +67,6 @@ watchEffect(async () => {
       allow="clipboard-read *; clipboard-write *"
     >
     </iframe>
-    <div class="tip">{{ tip }}</div>
   </div>
 </template>
 
@@ -75,25 +75,34 @@ watchEffect(async () => {
   height: calc(100vh - (var(--sls-topnav-height)));
   width: 100vw;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .tip {
-  position: absolute;
-  top: 6px;
-  color: red;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  color: #d4380d;
+  background: rgba(255, 247, 230, 0.96);
+  border-bottom: 1px solid rgba(250, 173, 20, 0.35);
   width: 100%;
   text-align: center;
-  padding: 10px 16px;
-  pointer-events: none;
-  font-size: 18px;
+  padding: 6px 16px;
+  font-size: 14px;
+  line-height: 20px;
+  z-index: 1;
 }
 
 .frame {
-  height: calc(100vh - (var(--sls-topnav-height)));
-  width: 100vw;
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
   border: none;
   outline: none;
-  margin: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .max-width {
