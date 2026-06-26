@@ -84,8 +84,8 @@ pageClass: sls-starops-home
   </div>
   <div class="sls-starops-grid sls-starops-grid--three">
     <a class="sls-starops-card" href="/doc/starops/practices/alert-rca-flow/article.html">
-      <h3 class="sls-starops-card__title">告警 RCA 全链路分析</h3>
-      <p class="sls-starops-card__desc">告警触发后 6 Phase 串接分诊、确认、根因、证据、修复、复盘，把 RCA 从「定位」做到「闭环」。</p>
+      <h3 class="sls-starops-card__title">告警 RCA：用 Skill 固化历史 Runbook</h3>
+      <p class="sls-starops-card__desc">把企业历史 Runbook 固化为 Agent 可执行 Skill，按错误码分支并行取证，证据不足升级 InvestigationAgent。</p>
       <span class="sls-starops-card__cta">查看文档</span>
     </a>
   </div>

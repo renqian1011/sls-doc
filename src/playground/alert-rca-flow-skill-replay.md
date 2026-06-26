@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 告警 RCA 全链路分析 — 对话回放
+title: 告警 RCA Skill 诊断流程 — 对话回放
 footer: false
 ---
 
@@ -9,7 +9,7 @@ import ReplayChat from '@theme/src/components/ReplayChat.vue'
 </script>
 
 <ReplayChat
-  src="https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/alert-rca-flow/docs/replay.json"
+  src="https://starops-demo.oss-cn-beijing.aliyuncs.com/starops/demo/starops-best-practice/alert-rca-flow/docs/replay-skill-flow.json"
   project="default-cms-1819385687343877-cn-hongkong"
   workspace="default-cms-1819385687343877-cn-hongkong"
   region="cn-hongkong"
