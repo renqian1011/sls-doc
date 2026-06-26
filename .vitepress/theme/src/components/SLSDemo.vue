@@ -4,6 +4,16 @@ import { computed, ref, watchEffect } from 'vue'
 import { initLang, isDarkTheme, parseCommonQuery } from './utils'
 import { inBrowser, useData } from 'vitepress'
 
+const assistantId = 'starops-demo'
+const withAssistantParams = (dest: string) =>
+  URI(dest)
+    .setSearch({
+      fixedAssistantId: assistantId,
+      assistantId,
+      staropsClusterRegion: 'cn-beijing',
+    })
+    .toString()
+
 const { lang } = useData()
 watchEffect(() => {
   if (inBrowser) {
@@ -17,14 +27,14 @@ const params = computed(() => {
 
   if (queries == null || queries.dest == null) {
     return {
-      dest: '/lognext/profile',
+      dest: withAssistantParams('/lognext/profile'),
       theme: 'default',
       maxWidth: false,
     }
   }
 
   return {
-    dest: queries.dest,
+    dest: withAssistantParams(queries.dest),
     theme: isDarkTheme() ? 'dark' : 'default',
     maxWidth: queries.maxWidth === true,
   }
