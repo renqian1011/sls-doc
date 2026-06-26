@@ -61,7 +61,8 @@ const sqlfunFiles = glob
  * @type {() => Promise<import('vitepress').UserConfig>}
  */
 module.exports = (async () => {
-  return {
+  const { withMermaid } = await import('vitepress-plugin-mermaid')
+  return withMermaid({
     vite: {
       build: {
         minify: false,
@@ -219,5 +220,5 @@ module.exports = (async () => {
         copyright: `Copyright © 2021-${new Date().getFullYear()} Aliyun SLS`,
       },
     },
-  }
+  })
 })()
