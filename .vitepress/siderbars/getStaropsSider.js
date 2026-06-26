@@ -9,7 +9,7 @@ function getSidebar() {
     },
     {
       text: '告警追因',
-      items: [{ text: '告警 RCA 全链路分析', link: '/starops/practices/alert-rca-flow/article' }],
+      items: [{ text: '告警 RCA：用 Skill 固化历史 Runbook', link: '/starops/practices/alert-rca-flow/article' }],
     },
     {
       text: '主动巡检',

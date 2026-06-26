@@ -19,7 +19,7 @@ export default {
       if (typeof document === 'undefined') return
       const badgeMap: Record<string, string> = {
         'RDS 周期性自动巡检': 'PUBLISHED v1.0',
-        '告警 RCA 全链路分析': 'DRAFT',
+        '告警 RCA：用 Skill 固化历史 Runbook': 'PUBLISHED v1.0',
         日志模式巡检: 'DRAFT',
         业务服务可靠性巡检: 'DRAFT',
         'MCP 集成治理 Checklist': 'WIP · 模板态',
