@@ -25,6 +25,7 @@ function getCnNavs() {
             { text: 'ARMS 调用链分析', link: '/arms/callAnalysis/home' },
             { text: 'ARMS 用户体验监控', link: '/arms/user/home' },
             { text: 'ARMS 性能剖析', link: '/arms/performance/home' },
+            { text: 'AI Coding Token 效率', link: '/ai_coding/token_efficiency' },
           ],
         },
       ],
@@ -94,6 +95,10 @@ function getCnNavs() {
             {
               text: 'AgentLoop Playground',
               link: 'https://sls.aliyun.com/doc/playground/agentloopdemo.html',
+            },
+            {
+              text: 'Token 效率分析',
+              link: 'https://sls.aliyun.com/doc/ai_coding/playground.html',
             },
           ],
         },
@@ -220,6 +225,10 @@ function getEnNavs() {
             {
               text: 'AgentLoop Playground',
               link: 'https://sls.aliyun.com/doc/en/playground/agentloopdemo.html',
+            },
+            {
+              text: 'Token Efficiency Analysis',
+              link: 'https://sls.aliyun.com/doc/ai_coding/playground.html',
             },
           ],
         },

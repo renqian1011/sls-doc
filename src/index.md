@@ -72,6 +72,10 @@ pageClass: sls-observe-home
 ## 案例中心介绍
 
 <div class="vt-box-container next-steps">
+  <a class="vt-box" href="/doc/ai_coding/token_efficiency.html">
+    <p class="next-steps-link">Token 效率分析</p>
+    <p class="next-steps-caption">AI Coding Agent Token 效率评估，包含指标大盘、效率评估器和评估结果洞察。</p>
+  </a>
   <a class="vt-box" href="/doc/searchdemo/query/search_with_index.html">
     <p class="next-steps-link">查询案例</p>
     <p class="next-steps-caption">日志服务（SLS）支持秒级查询十亿到千亿级别的日志数据，并支持使用SQL对查询结果进行统计分析，或者使用Scan功能对查询结果的指定字段进行扫描查询。</p>
