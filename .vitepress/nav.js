@@ -95,6 +95,10 @@ function getCnNavs() {
               text: 'AgentLoop Playground',
               link: 'https://sls.aliyun.com/doc/playground/agentloopdemo.html',
             },
+            {
+              text: 'Token 效率分析',
+              link: 'https://sls.aliyun.com/doc/playground/tokenefficiency.html',
+            },
           ],
         },
         {
@@ -220,6 +224,10 @@ function getEnNavs() {
             {
               text: 'AgentLoop Playground',
               link: 'https://sls.aliyun.com/doc/en/playground/agentloopdemo.html',
+            },
+            {
+              text: 'Token Efficiency Analysis',
+              link: 'https://sls.aliyun.com/doc/en/playground/tokenefficiency.html',
             },
           ],
         },
