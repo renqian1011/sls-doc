@@ -90,6 +90,9 @@ function getCnNavs() {
             {
               text: 'STAROps Playground',
               link: 'https://sls.aliyun.com/doc/playground/staropsdemo.html',
+            },            {
+              text: 'Ai_STAROps Playground',
+              link: 'https://sls.aliyun.com/doc/playground/staropsdemo.html',
             },
             {
               text: 'AgentLoop Playground',
@@ -241,6 +244,10 @@ function getEnNavs() {
             {
               text: 'STAROps',
               link: 'https://starops.console.aliyun.com/',
+            },
+            {
+              text: 'AISTAROps',
+              link: 'https://pre-starops.console.aliyun.com/quickExperience?staropsClusterRegion=cn-beijing&hideSidebar=true&hideHeader=true',
             },
             {
               text: 'AgentLoop',
