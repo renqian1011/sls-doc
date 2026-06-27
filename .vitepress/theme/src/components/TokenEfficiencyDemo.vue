@@ -16,6 +16,7 @@ const tabs = [
   { key: 'dashboard', label: 'Token 指标大盘' },
   { key: 'evaluator', label: 'Token 效率评估器' },
   { key: 'explorer', label: '评估结果洞察' },
+  { key: 'article', label: '技术文章', href: '/doc/ai_coding/token_efficiency.html' },
 ]
 
 const activeTab = ref('dashboard')
@@ -102,14 +103,23 @@ const currentUrl = computed(() => {
       <span>{{ tip.prefix }}</span>
     </div>
     <div class="tabs">
-      <button
-        v-for="tab in tabs"
-        :key="tab.key"
-        :class="{ tab: true, active: activeTab === tab.key }"
-        @click="activeTab = tab.key"
-      >
-        {{ tab.label }}
-      </button>
+      <template v-for="tab in tabs" :key="tab.key">
+        <a
+          v-if="tab.href"
+          :href="tab.href"
+          class="tab tab-link"
+          target="_blank"
+        >
+          {{ tab.label }} ↗
+        </a>
+        <button
+          v-else
+          :class="{ tab: true, active: activeTab === tab.key }"
+          @click="activeTab = tab.key"
+        >
+          {{ tab.label }}
+        </button>
+      </template>
     </div>
     <iframe
       v-if="currentUrl !== ''"
@@ -174,6 +184,15 @@ const currentUrl = computed(() => {
   color: #1677ff;
   border-bottom-color: #1677ff;
   font-weight: 500;
+}
+
+.tab-link {
+  text-decoration: none;
+  color: #666;
+}
+
+.tab-link:hover {
+  color: #1677ff;
 }
 
 .frame {

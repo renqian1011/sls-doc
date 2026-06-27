@@ -72,7 +72,7 @@ pageClass: sls-observe-home
 ## 案例中心介绍
 
 <div class="vt-box-container next-steps">
-  <a class="vt-box" href="/doc/playground/tokenefficiency.html" target="_blank">
+  <a class="vt-box" href="/doc/ai_coding/token_efficiency.html">
     <p class="next-steps-link">Token 效率分析</p>
     <p class="next-steps-caption">AI Coding Agent Token 效率评估，包含指标大盘、效率评估器和评估结果洞察。</p>
   </a>
