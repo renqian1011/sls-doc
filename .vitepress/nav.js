@@ -90,10 +90,7 @@ function getCnNavs() {
             {
               text: 'STAROps Playground',
               link: 'https://sls.aliyun.com/doc/playground/staropsdemo.html',
-            },            {
-              text: 'Ai_STAROps Playground',
-              link: 'https://sls.aliyun.com/doc/playground/staropsdemo.html',
-            },
+            },       
             {
               text: 'AgentLoop Playground',
               link: 'https://sls.aliyun.com/doc/playground/agentloopdemo.html',
