@@ -90,7 +90,11 @@ function getCnNavs() {
             {
               text: 'STAROps Playground',
               link: 'https://sls.aliyun.com/doc/playground/staropsdemo.html',
-            },       
+            },   
+            {
+              text: 'AI 体验 Playground',
+              link: 'https://sls.aliyun.com/doc/playground/ai-staropsdemo.html',
+            },    
             {
               text: 'AgentLoop Playground',
               link: 'https://sls.aliyun.com/doc/playground/agentloopdemo.html',
@@ -216,6 +220,10 @@ function getEnNavs() {
             {
               text: 'STAROps Playground',
               link: 'https://sls.aliyun.com/doc/en/playground/staropsdemo.html',
+            },
+            {
+              text: 'AI Experience Playground',
+              link: 'https://sls.aliyun.com/doc/en/playground/ai-staropsdemo.html',
             },
             {
               text: 'AgentLoop Playground',

@@ -4,10 +4,8 @@ import { computed, ref, watchEffect } from 'vue'
 import { initLang, isDarkTheme, parseCommonQuery } from './utils'
 import { inBrowser, useData } from 'vitepress'
 
-const props = defineProps(['workspace', 'region'])
-const workspace = props.workspace ?? 'default-cms-1819385687343877-cn-hongkong'
-const region = props.region ?? 'cn-hongkong'
-const assistantId = 'starops-demo'
+const props = defineProps(['dest'])
+const defaultDest = props.dest ?? '/quickExperience?staropsClusterRegion=cn-beijing&hideSidebar=true&hideHeader=true'
 
 const { lang } = useData()
 watchEffect(() => {
@@ -22,7 +20,7 @@ const params = computed(() => {
 
   if (queries == null || queries.dest == null) {
     return {
-      dest: `/?assistantId=${assistantId}&fixedAssistantId=${assistantId}&initWorkspace=${workspace}&hideWorkspaceSwitch=true&showStarOpsReplayProgress=true&staropsClusterRegion=cn-beijing`,
+      dest: defaultDest,
       theme: 'default',
       maxWidth: false,
     }
@@ -35,26 +33,12 @@ const params = computed(() => {
   }
 })
 
-const { isShare } = parseCommonQuery()
+
 
 const productionUrl = 'https://starops.console.aliyun.com/quickExperience?staropsClusterRegion=cn-beijing&hideSidebar=true&hideHeader=true'
 
 const tip = computed(() => {
-  if (isShare) {
-    return null
-  }
-
-  return lang.value === 'en'
-    ? {
-        prefix: 'This is a demo environment. ',
-        linkText: 'STAROps production console',
-        suffix: '',
-      }
-    : {
-        prefix: '当前为演示环境，',
-        linkText: 'STAROps 生产地址',
-        suffix: '',
-      }
+  return null
 })
 
 let dest = ref('')

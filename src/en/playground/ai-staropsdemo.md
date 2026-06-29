@@ -1,6 +1,6 @@
 ---
 layout: page
-title: AI 体验 Playground
+title: AI Experience Playground
 footer: false
 ---
 
